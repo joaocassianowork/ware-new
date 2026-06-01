@@ -178,7 +178,7 @@ input,select,textarea,button[type="submit"]{cursor:auto!important}
 <body>
 
 <!-- Netlify Forms — detecção estática (invisível para o usuário) -->
-<form name="lead-popup" netlify netlify-honeypot="bot-field" hidden>
+<form name="lead-popup"  -honeypot="bot-field" hidden>
   <input type="text" name="nome"/>
   <input type="tel" name="whatsapp"/>
   <select name="tempo_atuacao"><option value=""></option></select>
@@ -190,11 +190,19 @@ input,select,textarea,button[type="submit"]{cursor:auto!important}
 <header>
   <nav class="nav" id="nav" role="navigation"><div class="wrap"><div class="nav-inner">
     <a href="/" class="logo"><div><span class="logo-wmark">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot" aria-hidden="true"></div></a>
-    <ul class="nav-links" role="list"><li><a href="/">Início</a></li><li><a href="/servicos.html" class="active">Serviços</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/sobre.html">Sobre</a></li><li><a href="/contato.html">Contato</a></li></ul>
-    <a href="https://wa.link/aqib9n" class="nav-cta" target="_blank" rel="noopener noreferrer">Diagnóstico gratuito <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <ul class="nav-links" role="list"><li><a href="/" class="active">Início</a></li><li><a href="/sobre.html">Sobre</a></li><li><a href="/servicos.html">Serviços</a></li><li><a href="/conselho.html">Conselho</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contato.html">Contato</a></li></ul>
+    <a href="https://wa.me/5518996745458" class="nav-cta" target="_blank" rel="noopener noreferrer">Diagnóstico gratuito <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div></div></nav>
-  <nav class="nav-mob" id="navMob" role="dialog" aria-modal="true"><button class="nav-mob-close" id="navClose">Fechar</button><a href="/">Início</a><a href="/servicos.html">Serviços</a><a href="/blog.html">Blog</a><a href="/faq.html">FAQ</a><a href="/sobre.html">Sobre</a><a href="/contato.html">Contato</a><a href="https://wa.link/aqib9n" target="_blank" rel="noopener noreferrer">WhatsApp</a></nav>
+  <nav class="nav-mob" id="navMob">
+    <button class="nav-mob-close" id="navClose">Fechar</button>
+    <a href="/">Início</a>
+    <a href="/sobre.html">Sobre</a>
+    <a href="/servicos.html">Serviços</a>
+    <a href="/conselho.html">Conselho</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/contato.html">Contato</a>
+  </nav>
 </header>
 <main>
   <section class="page-hero" aria-labelledby="esp-title">
@@ -219,7 +227,7 @@ input,select,textarea,button[type="submit"]{cursor:auto!important}
         <p class="esp-card-label">Diagnóstico gratuito</p>
         <p class="esp-card-title">Apareça para famílias que precisam de um advogado de inventário <span class="acc">na internet.</span></p>
         <p class="esp-card-p">30 minutos. Sem compromisso. Você sai com clareza sobre o que mudar.</p>
-        <a href="https://wa.link/aqib9n" class="nav-cta" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;justify-content:center;width:100%;padding:.85rem 1.75rem;border-radius:100px;background:var(--blue);color:#fff;font-size:.8rem;font-weight:500;cursor:none">Falar pelo WhatsApp <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://wa.me/5518996745458" class="nav-cta" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;justify-content:center;width:100%;padding:.85rem 1.75rem;border-radius:100px;background:var(--blue);color:#fff;font-size:.8rem;font-weight:500;cursor:none">Falar pelo WhatsApp <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <div class="esp-card">
         <p class="esp-card-label">Leia também</p>
@@ -329,7 +337,7 @@ input,select,textarea,button[type="submit"]{cursor:auto!important}
       <span class="ew" style="justify-content:center;display:flex;margin-bottom:1.5rem">Próximo passo</span>
       <h2 class="esp-cta-h2" id="esp-cta-title">Seu escritório merece aparecer para quem <span class="acc">mais precisa de você.</span></h2>
       <p class="esp-cta-sub">Diagnóstico gratuito. 30 minutos. Sem compromisso.</p>
-      <a href="https://wa.link/aqib9n" class="nav-cta" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:100px;background:var(--blue);color:#fff;font-size:.8rem;font-weight:500;cursor:none">Falar com a Ware pelo WhatsApp <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://wa.me/5518996745458" class="nav-cta" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:100px;background:var(--blue);color:#fff;font-size:.8rem;font-weight:500;cursor:none">Falar com a Ware pelo WhatsApp <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div></div>
   </section>
 
@@ -341,9 +349,12 @@ input,select,textarea,button[type="submit"]{cursor:auto!important}
       <div class="popup-badge">Diagnóstico gratuito</div>
       <h2 class="popup-h" id="popupTitle">Seu escritório merece crescer além da <span class="acc">indicação.</span></h2>
       <p class="popup-sub">Preencha abaixo e entraremos em contato para um diagnóstico gratuito — sem compromisso.</p>
-      <form class="popup-form" name="lead-popup" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="popupFormEl">
-        <input type="hidden" name="form-name" value="lead-popup"/>
-        <p style="display:none"><input name="bot-field"/></p>
+      <form class="popup-form" id="popupFormEl" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="e9a73473-c214-451a-8a19-e82da8439446"/>
+        <input type="hidden" name="subject" value="Novo Lead — Popup Ware Jurídico"/>
+        <input type="checkbox" name="botcheck" style="display:none"/>
+        
+        
         <div class="popup-row">
           <div class="popup-group">
             <label class="popup-label" for="p-nome">Nome</label>
@@ -389,8 +400,11 @@ input,select,textarea,button[type="submit"]{cursor:auto!important}
 </main>
 <footer role="contentinfo"><div class="wrap">
   <div class="ft-top"><div><div class="logo"><div><span class="logo-wmark" style="color:rgba(245,242,238,.35)">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot"></div></div><p class="ft-tagline">Agência de marketing 100% focada no mercado jurídico.</p></div>
-  <nav class="ft-nav"><div class="ft-col"><h5>Serviços</h5><ul><li><a href="/servicos.html#trafego">Tráfego Pago</a></li><li><a href="/servicos.html#site">Site Profissional</a></li><li><a href="/servicos.html#redes">Redes Sociais</a></li><li><a href="/servicos.html#google">Google Meu Negócio</a></li></ul></div><div class="ft-col"><h5>Empresa</h5><ul><li><a href="/sobre.html">Sobre a Ware</a></li><li><a href="/metodo.html">Nosso Método</a></li><li><a href="/diagnostico.html">Diagnóstico Gratuito</a></li><li><a href="/parceiros.html">Seja Parceiro</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contato.html">Contato</a></li></ul></div></nav></div>
-  <div class="ft-bot"><p class="ft-copy">© 2025 Ware Jurídico. Todos os direitos reservados.</p><a href="/politica-de-privacidade.html" class="ft-policy">Política de Privacidade</a></div>
+  <nav class="ft-nav"><div class="ft-col"><h5>Serviços</h5><ul><li><a href="/servicos.html#trafego">Tráfego Pago</a></li><li><a href="/servicos.html#site">Site Profissional</a></li><li><a href="/servicos.html#redes">Redes Sociais</a></li><li><a href="/servicos.html#google">Google Meu Negócio</a></li></ul></div>
+        <div class="ft-col"><h5>Empresa</h5><ul><li><a href="/sobre.html">Sobre a Ware</a></li><li><a href="/metodo.html">Nosso Método</a></li><li><a href="/diagnostico.html">Diagnóstico Gratuito</a></li><li><a href="/parceiros.html">Seja Parceiro</a></li></ul></div>
+        <div class="ft-col"><h5>Conteúdo</h5><ul><li><a href="/blog.html">Blog</a></li><li><a href="/conselho.html">Conselho Ware</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contato.html">Contato</a></li></ul></div>
+        </div></nav></div>
+  <div class="ft-bot"><p class="ft-copy">© 2026 Ware Jurídico. Todos os direitos reservados.</p><a href="/politica-de-privacidade.html" class="ft-policy">Política de Privacidade</a></div>
 </div></footer>
 <script>
 (function(){const el=document.getElementById('cur'),dot=document.getElementById('c-dot'),ring=document.getElementById('c-ring');if(!el)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});document.querySelectorAll('a,button').forEach(b=>{b.addEventListener('mouseenter',()=>el.classList.add('ch'));b.addEventListener('mouseleave',()=>el.classList.remove('ch'))});(function tick(){dot.style.cssText='left:'+mx+'px;top:'+my+'px';rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.cssText='left:'+rx+'px;top:'+ry+'px';requestAnimationFrame(tick)})()})();
@@ -407,7 +421,7 @@ mob?.addEventListener('click',function(e){if(e.target===mob)shutM()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mob?.classList.contains('open'))shutM()});
 </script>
 
-<a href="https://wa.link/aqib9n" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Ware pelo WhatsApp">
+<a href="https://wa.me/5518996745458" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Ware pelo WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 <button class="back-top" id="backTop" aria-label="Voltar ao topo">
@@ -465,12 +479,12 @@ bt?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
     btn.textContent='Enviando...';
     btn.disabled=true;
     try{
-      await fetch('/',{
+      const res=await fetch('https://api.web3forms.com/submit',{
         method:'POST',
         headers:{'Content-Type':'application/x-www-form-urlencoded'},
         body:new URLSearchParams(data).toString()
       });
-      formWrap.querySelector('form').style.display='none';
+      const json=await res.json();if(json.success){formWrap.querySelector('form').style.display='none';
       formWrap.querySelector('.popup-badge').style.display='none';
       formWrap.querySelector('.popup-h').style.display='none';
       formWrap.querySelector('.popup-sub').style.display='none';
@@ -486,7 +500,7 @@ bt?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
         (ig?'. Meu Instagram é '+ig:'')+
         '. Quero um diagnóstico gratuito do meu escritório.'
       );
-      window.open('https://wa.link/aqib9n?text='+txt,'_blank');
+      window.open('https://wa.me/5518996745458?text='+txt,'_blank');
       hide();
     }
   });

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[NOME DO ADVOGADO] | Conselho Ware</title>
+  <meta name="description" content="Entrevista com [NOME] — [ESPECIALIDADE] em [CIDADE]. Experiências, visões e o futuro da advocacia. Conselho Ware by Ware Jurídico."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://warejuridico.com.br/conselho/[SLUG].html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="[NOME DO ADVOGADO] | Conselho Ware"/>
+  <meta property="og:description" content="[PRIMEIRO TRECHO DA RESPOSTA 1 — até 160 caracteres]"/>
+  <meta property="og:url" content="https://warejuridico.com.br/conselho/[SLUG].html"/>
+  <meta property="og:image" content="https://warejuridico.com.br/conselho/fotos/[SLUG].jpg"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Interview","name":"Conselho Ware — [NOME DO ADVOGADO]","url":"https://warejuridico.com.br/conselho/[SLUG].html","publisher":{"@type":"Organization","name":"Ware Jurídico"},"contributor":{"@type":"Person","name":"[NOME DO ADVOGADO]","jobTitle":"[ESPECIALIDADE]","address":{"@type":"PostalAddress","addressLocality":"[CIDADE]","addressCountry":"BR"}}}</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N6PHGW3L');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+  <style>
+    :root{
+      --black:#080808;--black-2:#0e0e0e;--black-3:#141414;
+      --gold:#C9A84C;--gold-dim:rgba(201,168,76,.1);--gold-border:rgba(201,168,76,.25);
+      --blue:#4F7EFF;--white:#f5f2ee;--w60:rgba(245,242,238,.6);--w30:rgba(245,242,238,.3);
+      --bd:rgba(255,255,255,.07);--fs:'Sora',sans-serif;--fp:'Playfair Display',serif;--fb:'DM Sans',sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--fb);background:var(--black);color:var(--white);overflow-x:hidden;cursor:none}
+    a{text-decoration:none;color:inherit}
+    ::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+    #cur{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;mix-blend-mode:difference}
+    #c-dot{width:6px;height:6px;background:var(--white);border-radius:50%;position:absolute;transform:translate(-50%,-50%)}
+    #c-ring{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.25);position:absolute;transform:translate(-50%,-50%);transition:width .4s,height .4s,opacity .3s;opacity:.25}
+    .ch #c-ring{width:48px;height:48px;opacity:.5;border-color:var(--gold)}
+    .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem)}
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;transition:padding .4s,background .4s,border-color .4s;border-bottom:1px solid transparent}
+    .nav.stuck{background:rgba(8,8,8,.95);backdrop-filter:blur(24px);border-color:var(--bd);padding:1rem 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:.5rem}
+    .logo-wmark{font-family:var(--fs);font-size:1.25rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--white);line-height:1}
+    .logo-sub{font-size:.52rem;font-weight:300;letter-spacing:.28em;text-transform:uppercase;color:var(--w30);display:block;margin-top:.1rem}
+    .logo-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-left:.1rem;margin-bottom:.5rem;align-self:flex-end}
+    .nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
+    .nav-links a{font-size:.72rem;font-weight:400;color:var(--w30);letter-spacing:.04em;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--white)}
+    .nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.72rem;font-weight:600;padding:.65rem 1.4rem;border-radius:100px;background:var(--gold);color:var(--black);transition:opacity .2s;cursor:none}
+    .nav-cta:hover{opacity:.88}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:4px}
+    .nav-toggle span{display:block;width:20px;height:1px;background:var(--w60);border-radius:1px;transition:.3s}
+    .nav-mob{position:fixed;inset:0;background:var(--black);z-index:99;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.25rem;padding:0 clamp(2rem,8vw,6rem);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+    .nav-mob.open{opacity:1;visibility:visible}
+    .nav-mob a{font-family:var(--fs);font-size:clamp(2.2rem,7vw,5rem);font-weight:800;color:var(--w30);line-height:1.2;transition:color .2s;letter-spacing:-.02em}
+    .nav-mob a:hover{color:var(--white)}
+    .nav-mob-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--w30);font-size:.9rem;cursor:none;font-family:var(--fb)}
+    /* PROGRESSO */
+    #read-progress{position:fixed;top:0;left:0;width:0%;height:2px;background:var(--gold);z-index:9998;transition:width .1s linear}
+    /* HERO ENTREVISTA */
+    .int-hero{padding:clamp(8rem,13vw,11rem) 0 0;background:var(--black);position:relative;overflow:hidden}
+    .int-hero-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;opacity:.035;pointer-events:none}
+    .int-hero-glow{position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 65%);pointer-events:none}
+    .int-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:500;color:var(--w30);margin-bottom:2.5rem;transition:color .2s}
+    .int-back:hover{color:var(--white)}
+    .int-hero-grid{display:grid;grid-template-columns:1fr 380px;gap:clamp(3rem,6vw,6rem);align-items:end;padding-bottom:clamp(3rem,5vw,5rem)}
+    .int-eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+    .int-eyebrow-line{width:32px;height:1px;background:var(--gold)}
+    .int-eyebrow-text{font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+    .int-numero{font-family:var(--fp);font-size:.88rem;font-style:italic;color:rgba(201,168,76,.4);margin-bottom:.5rem}
+    .int-nome{font-family:var(--fp);font-size:clamp(2.8rem,6vw,5.5rem);font-weight:700;line-height:1.05;color:var(--white);letter-spacing:-.02em;margin-bottom:.5rem}
+    .int-area{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+    .int-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
+    .int-meta-item{font-size:.72rem;font-weight:300;color:var(--w30);display:flex;align-items:center;gap:.4rem}
+    .int-meta-item svg{opacity:.5}
+    .int-share{display:flex;align-items:center;gap:.75rem}
+    .int-share-label{font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w30)}
+    .int-share-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--bd);background:var(--black-2);display:flex;align-items:center;justify-content:center;cursor:none;transition:border-color .2s,background .2s;color:var(--w30)}
+    .int-share-btn:hover{border-color:var(--gold-border);background:var(--gold-dim);color:var(--gold)}
+    /* FOTO */
+    .int-photo-wrap{position:relative}
+    .int-photo{border-radius:20px;overflow:hidden;aspect-ratio:3/4;background:var(--black-3);border:1px solid var(--bd);position:relative}
+    .int-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .int-photo-badge{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;background:rgba(8,8,8,.9);backdrop-filter:blur(16px);border:1px solid var(--gold-border);border-radius:12px;padding:1rem 1.25rem}
+    .int-photo-badge-name{font-family:var(--fs);font-size:.9rem;font-weight:700;color:var(--white);letter-spacing:-.01em}
+    .int-photo-badge-role{font-size:.65rem;font-weight:300;color:var(--gold);margin-top:.2rem;letter-spacing:.04em}
+    /* LINHA DIVISÓRIA */
+    .int-divider{border:none;border-top:1px solid var(--bd);margin:0}
+    /* CONTEÚDO */
+    .int-content{max-width:760px;margin:0 auto;padding:clamp(4rem,7vw,6rem) clamp(1.5rem,5vw,4rem)}
+    /* PERGUNTA + RESPOSTA */
+    .int-qa{margin-bottom:clamp(3rem,5vw,4.5rem)}
+    .int-qa:last-of-type{margin-bottom:0}
+    .int-pergunta{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
+    .int-perg-n{font-family:var(--fp);font-size:1.5rem;font-weight:700;color:var(--gold);opacity:.4;line-height:1;flex-shrink:0;font-style:italic;width:2rem}
+    .int-perg-text{font-family:var(--fp);font-size:1.05rem;font-weight:400;color:rgba(245,242,238,.45);line-height:1.55;font-style:italic}
+    .int-resposta{font-size:.95rem;font-weight:300;line-height:1.95;color:rgba(245,242,238,.7);padding-left:3rem}
+    .int-resposta p{margin-bottom:1rem}
+    .int-resposta p:last-child{margin-bottom:0}
+    /* DESTAQUE de frase */
+    .int-highlight{border-left:2px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0 2rem 3rem;background:var(--gold-dim);border-radius:0 10px 10px 0}
+    .int-highlight p{font-family:var(--fp);font-size:1.1rem;font-style:italic;color:var(--white);line-height:1.6}
+    /* ASSINATURA */
+    .int-assinatura{background:var(--black-2);border:1px solid var(--bd);border-radius:16px;padding:2rem;margin-top:3rem;display:flex;align-items:center;gap:1.5rem}
+    .int-ass-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--gold-border);flex-shrink:0}
+    .int-ass-photo-placeholder{width:56px;height:56px;border-radius:50%;background:var(--black-3);border:1px solid var(--gold-border);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .int-ass-label{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:.3rem}
+    .int-ass-name{font-family:var(--fs);font-size:.95rem;font-weight:700;color:var(--white);letter-spacing:-.01em}
+    .int-ass-role{font-size:.75rem;font-weight:300;color:var(--w30);margin-top:.2rem}
+    /* CTA WARE */
+    .int-ware-cta{background:var(--black-3);border:1px solid var(--bd);border-radius:16px;padding:2.5rem;text-align:center;margin-top:3rem;position:relative;overflow:hidden}
+    .int-ware-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .int-ware-cta-label{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:.75rem}
+    .int-ware-cta-title{font-family:var(--fp);font-size:1.35rem;font-weight:700;color:var(--white);margin-bottom:.6rem;line-height:1.3}
+    .int-ware-cta-title em{font-style:italic;color:var(--gold)}
+    .int-ware-cta p{font-size:.82rem;font-weight:300;color:var(--w30);margin-bottom:1.5rem;line-height:1.7}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.8rem;font-weight:600;padding:.85rem 1.75rem;border-radius:100px;border:none;cursor:none;transition:transform .3s,opacity .2s;letter-spacing:.02em}
+    .btn svg{flex-shrink:0;transition:transform .3s}
+    .btn:hover svg{transform:translate(3px,-3px)}
+    .btn-gold{background:var(--gold);color:var(--black)}.btn-gold:hover{opacity:.88;transform:translateY(-2px)}
+    /* NAV ENTREVISTAS */
+    .int-nav{background:var(--black-2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:2rem 0}
+    .int-nav-inner{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .int-nav-link{display:flex;flex-direction:column;gap:.35rem;max-width:240px}
+    .int-nav-label{font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.6}
+    .int-nav-name{font-size:.85rem;font-weight:500;color:var(--w60);transition:color .2s;line-height:1.35}
+    .int-nav-link:hover .int-nav-name{color:var(--white)}
+    /* FOOTER */
+    footer{background:var(--black);border-top:1px solid var(--bd);padding:3.5rem 0 2rem}
+    .ft-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--bd)}
+    .ft-tagline{font-size:.72rem;font-weight:300;color:var(--w30);margin-top:.75rem;max-width:200px;line-height:1.65}
+    .ft-nav{display:flex;gap:4rem;flex-wrap:wrap}
+    .ft-col h5{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w30);margin-bottom:1.25rem}
+    .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+    .ft-col a{font-size:.78rem;font-weight:300;color:var(--w30);transition:color .2s}
+    .ft-col a:hover{color:var(--white)}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem}
+    .ft-copy{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.18)}
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s;cursor:none}
+    .wa-float:hover{transform:translateY(-3px) scale(1.05)}
+    .back-top{position:fixed;bottom:96px;right:28px;z-index:999;width:40px;height:40px;border-radius:50%;background:rgba(14,14,14,.9);border:1px solid rgba(255,255,255,.1);color:var(--w60);display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;opacity:0;pointer-events:none;backdrop-filter:blur(10px)}
+    .back-top.visible{opacity:1;pointer-events:all}
+    .back-top:hover{border-color:var(--gold);color:var(--gold)}
+    @media(max-width:1024px){.int-hero-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){body{cursor:auto}#cur{display:none}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.int-photo-wrap{display:none}.int-share-btn,.wa-float,.back-top{cursor:auto}.int-resposta{padding-left:0}.int-highlight{margin-left:0}}
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="read-progress" aria-hidden="true"></div>
+<div id="cur" aria-hidden="true"><div id="c-ring"></div><div id="c-dot"></div></div>
+<header>
+  <nav class="nav" id="nav"><div class="wrap"><div class="nav-inner">
+    <a href="/" class="logo"><div><span class="logo-wmark">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot" aria-hidden="true"></div></a>
+    <ul class="nav-links"><li><a href="/">Início</a></li><li><a href="/servicos.html">Serviços</a></li><li><a href="/conselho.html" class="active">Conselho Ware</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contato.html">Contato</a></li></ul>
+    <a href="https://wa.me/5518996745458?text=Ol%C3%A1%21%20Vi%20o%20Conselho%20Ware%20e%20tenho%20interesse%20em%20participar%20como%20entrevistado." class="nav-cta" target="_blank" rel="noopener noreferrer">Quero participar</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div></div></nav>
+  <nav class="nav-mob" id="navMob"><button class="nav-mob-close" id="navClose">Fechar</button><a href="/">Início</a><a href="/servicos.html">Serviços</a><a href="/conselho.html">Conselho Ware</a><a href="/blog.html">Blog</a><a href="/contato.html">Contato</a></nav>
+</header>
+<main>
+  <section class="int-hero">
+    <div class="int-hero-grain" aria-hidden="true"></div>
+    <div class="int-hero-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <a href="/conselho.html" class="int-back"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 11L2 7L6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Conselho Ware</a>
+      <div class="int-hero-grid">
+        <div>
+          <div class="int-eyebrow"><div class="int-eyebrow-line"></div><span class="int-eyebrow-text">Entrevista</span></div>
+          <p class="int-numero">Edição #[NÚMERO]</p>
+          <h1 class="int-nome">[NOME DO ADVOGADO]</h1>
+          <p class="int-area">[ESPECIALIDADE]</p>
+          <div class="int-meta">
+            <span class="int-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>[CIDADE], [ESTADO]</span>
+            <span class="int-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>[DATA DE PUBLICAÇÃO]</span>
+            <span class="int-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 min de leitura</span>
+          </div>
+          <div class="int-share">
+            <span class="int-share-label">Compartilhar</span>
+            <button class="int-share-btn" onclick="navigator.share&&navigator.share({title:document.title,url:location.href})" aria-label="Compartilhar">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </button>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://warejuridico.com.br/conselho/[SLUG].html" target="_blank" rel="noopener noreferrer" class="int-share-btn" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://wa.me/?text=Li%20essa%20entrevista%20no%20Conselho%20Ware%20e%20achei%20incrível.%20https://warejuridico.com.br/conselho/[SLUG].html" target="_blank" rel="noopener noreferrer" class="int-share-btn" aria-label="WhatsApp">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- FOTO -->
+        <div class="int-photo-wrap">
+          <div class="int-photo">
+            <img src="/conselho/fotos/[SLUG].jpg" alt="[NOME DO ADVOGADO] — [ESPECIALIDADE], [CIDADE]" loading="lazy"/>
+            <div class="int-photo-badge">
+              <div class="int-photo-badge-name">[NOME DO ADVOGADO]</div>
+              <div class="int-photo-badge-role">[ESPECIALIDADE] · [CIDADE]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="int-divider"/>
+
+  <!-- CONTEÚDO DA ENTREVISTA -->
+  <article class="int-content">
+
+    <!-- PERGUNTA 1 -->
+    <div class="int-qa">
+      <div class="int-pergunta">
+        <div class="int-perg-n">1</div>
+        <div class="int-perg-text">Qual foi o maior desafio que você enfrentou na sua carreira jurídica e o que ele te ensinou?</div>
+      </div>
+      <div class="int-resposta">
+        <p>[RESPOSTA 1 DO ADVOGADO — substituir este texto pela resposta real]</p>
+      </div>
+      <!-- Opcional: destacar uma frase marcante da resposta -->
+      <!-- <div class="int-highlight"><p>"[FRASE MARCANTE DA RESPOSTA 1]"</p></div> -->
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="int-qa">
+      <div class="int-pergunta">
+        <div class="int-perg-n">2</div>
+        <div class="int-perg-text">Na sua visão, o que separa um advogado mediano de um advogado referência na sua área?</div>
+      </div>
+      <div class="int-resposta">
+        <p>[RESPOSTA 2 DO ADVOGADO]</p>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="int-qa">
+      <div class="int-pergunta">
+        <div class="int-perg-n">3</div>
+        <div class="int-perg-text">Como a tecnologia e o marketing digital estão mudando a advocacia na sua especialidade?</div>
+      </div>
+      <div class="int-resposta">
+        <p>[RESPOSTA 3 DO ADVOGADO]</p>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 4 -->
+    <div class="int-qa">
+      <div class="int-pergunta">
+        <div class="int-perg-n">4</div>
+        <div class="int-perg-text">O que você diria para um advogado recém-aprovado que está começando agora?</div>
+      </div>
+      <div class="int-resposta">
+        <p>[RESPOSTA 4 DO ADVOGADO]</p>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 5 -->
+    <div class="int-qa">
+      <div class="int-pergunta">
+        <div class="int-perg-n">5</div>
+        <div class="int-perg-text">Qual é a sua visão sobre o futuro da advocacia brasileira nos próximos 10 anos?</div>
+      </div>
+      <div class="int-resposta">
+        <p>[RESPOSTA 5 DO ADVOGADO]</p>
+      </div>
+      <!-- Frase de encerramento — destacar a mais marcante da resposta 5 -->
+      <div class="int-highlight"><p>"[FRASE MARCANTE DA RESPOSTA 5]"</p></div>
+    </div>
+
+    <!-- ASSINATURA DO ENTREVISTADO -->
+    <div class="int-assinatura">
+      <img src="/conselho/fotos/[SLUG].jpg" alt="[NOME]" class="int-ass-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="int-ass-photo-placeholder" style="display:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.4)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div>
+        <p class="int-ass-label">Entrevistado</p>
+        <p class="int-ass-name">[NOME DO ADVOGADO]</p>
+        <p class="int-ass-role">[ESPECIALIDADE] · [CIDADE], [ESTADO] · OAB/[SECCIONAL] [NÚMERO]</p>
+      </div>
+    </div>
+
+    <!-- CTA WARE -->
+    <div class="int-ware-cta">
+      <p class="int-ware-cta-label">Uma iniciativa da</p>
+      <h2 class="int-ware-cta-title">Conselho Ware by <em>Ware Jurídico</em></h2>
+      <p>Documentando as vozes da advocacia brasileira. Se você é advogado e quer fazer parte do Conselho Ware, entre em contato.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap">
+        <a href="https://wa.me/5518996745458?text=Ol%C3%A1%21%20Li%20o%20Conselho%20Ware%20e%20quero%20participar%20como%20entrevistado." class="btn btn-gold" target="_blank" rel="noopener noreferrer">Quero ser entrevistado <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/conselho.html" class="btn" style="background:transparent;color:var(--w60);border:1px solid var(--bd)">Ver todas as entrevistas <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- NAVEGAÇÃO ENTRE ENTREVISTAS -->
+  <div class="int-nav">
+    <div class="wrap"><div class="int-nav-inner">
+      <a href="/conselho/[SLUG-ANTERIOR].html" class="int-nav-link">
+        <span class="int-nav-label">← Anterior</span>
+        <span class="int-nav-name">[NOME DO ADVOGADO ANTERIOR]</span>
+      </a>
+      <a href="/conselho.html" style="font-size:.72rem;font-weight:500;color:var(--gold);display:flex;align-items:center;gap:.4rem">Ver todas as entrevistas</a>
+      <a href="/conselho/[SLUG-PROXIMO].html" class="int-nav-link" style="text-align:right">
+        <span class="int-nav-label">Próxima →</span>
+        <span class="int-nav-name">[NOME DO PRÓXIMO ADVOGADO]</span>
+      </a>
+    </div></div>
+  </div>
+
+</main>
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div><div class="logo"><div><span class="logo-wmark" style="color:rgba(245,242,238,.35)">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot"></div></div><p class="ft-tagline">Agência de marketing 100% focada no mercado jurídico.</p></div>
+    <nav class="ft-nav">
+      <div class="ft-col"><h5>Serviços</h5><ul><li><a href="/servicos.html#trafego">Tráfego Pago</a></li><li><a href="/servicos.html#site">Site Profissional</a></li><li><a href="/servicos.html#redes">Redes Sociais</a></li><li><a href="/servicos.html#google">Google Meu Negócio</a></li></ul></div>
+      <div class="ft-col"><h5>Empresa</h5><ul><li><a href="/sobre.html">Sobre a Ware</a></li><li><a href="/metodo.html">Nosso Método</a></li><li><a href="/diagnostico.html">Diagnóstico Gratuito</a></li><li><a href="/parceiros.html">Seja Parceiro</a></li><li><a href="/conselho.html">Conselho Ware</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contato.html">Contato</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="ft-bot"><p class="ft-copy">© 2025 Ware Jurídico. Todos os direitos reservados.</p><a href="/politica-de-privacidade.html" style="font-size:.68rem;color:rgba(255,255,255,.22)">Política de Privacidade</a></div>
+</div></footer>
+<a href="https://wa.me/5518996745458" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<button class="back-top" id="backTop" aria-label="Voltar ao topo"><svg width="18" height="18" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script>
+(function(){const el=document.getElementById('cur'),dot=document.getElementById('c-dot'),ring=document.getElementById('c-ring');if(!el)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});document.querySelectorAll('a,button').forEach(b=>{b.addEventListener('mouseenter',()=>el.classList.add('ch'));b.addEventListener('mouseleave',()=>el.classList.remove('ch'))});(function tick(){dot.style.cssText='left:'+mx+'px;top:'+my+'px';rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.cssText='left:'+rx+'px;top:'+ry+'px';requestAnimationFrame(tick)})()})();
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60),{passive:true});
+const tog=document.getElementById('navToggle'),mob=document.getElementById('navMob'),cls=document.getElementById('navClose');
+tog?.addEventListener('click',()=>{mob.classList.add('open');tog.classList.add('open');document.body.style.overflow='hidden'});
+cls?.addEventListener('click',()=>{mob.classList.remove('open');tog.classList.remove('open');document.body.style.overflow=''});
+mob?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mob.classList.remove('open');tog.classList.remove('open');document.body.style.overflow=''}));
+const bt=document.getElementById('backTop');
+window.addEventListener('scroll',()=>bt?.classList.toggle('visible',scrollY>400),{passive:true});
+bt?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+// Barra de progresso
+(function(){const bar=document.getElementById('read-progress');if(!bar)return;window.addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=Math.min((h.scrollTop/(h.scrollHeight-h.clientHeight))*100,100)+'%';},{passive:true});})();
+</script>
+</body>
+</html>

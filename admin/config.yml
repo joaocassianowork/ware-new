@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Artigos do Blog"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Categoria", name: "category", widget: "select", options: ["Marketing Jurídico", "Tráfego Pago", "SEO Jurídico", "Redes Sociais", "Google Meu Negócio"] }
+      - { label: "Resumo (meta description)", name: "description", widget: "string" }
+      - { label: "Tempo de leitura (ex: 8 min)", name: "readtime", widget: "string" }
+      - { label: "Conteúdo do artigo", name: "body", widget: "markdown" }
