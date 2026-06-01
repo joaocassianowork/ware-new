@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://warejuridico.com.br/sitemap.xml
+
+# LLMs
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /

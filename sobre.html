@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre | Ware Jurídico — Agência de Marketing para Advogados</title>
+  <meta name="description" content="Conheça a Ware Jurídico — a agência criada para advogados que acreditam que bons profissionais merecem ser encontrados."/>
+  <meta name="robots" content="index, follow"/><link rel="alternate" hreflang="pt-BR" href="https://warejuridico.com.br/sobre.html" />
+  <link rel="canonical" href="https://warejuridico.com.br/sobre.html"/>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N6PHGW3L');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <style>
+    :root{--black:#080808;--black-2:#0e0e0e;--black-3:#141414;--black-4:#1a1a1a;--blue:#4F7EFF;--blue-dim:rgba(79,126,255,.12);--blue-border:rgba(79,126,255,.22);--white:#f5f2ee;--w60:rgba(245,242,238,.6);--w30:rgba(245,242,238,.3);--w12:rgba(245,242,238,.12);--w06:rgba(245,242,238,.06);--bd:rgba(255,255,255,.07);--fs:'Sora',sans-serif;--fb:'DM Sans',sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--fb);background:var(--black);color:var(--white);overflow-x:hidden;cursor:none}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px}
+#cur{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;mix-blend-mode:difference}
+#c-dot{width:6px;height:6px;background:var(--white);border-radius:50%;position:absolute;transform:translate(-50%,-50%)}
+#c-ring{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.25);position:absolute;transform:translate(-50%,-50%);transition:width .4s var(--ease),height .4s var(--ease),opacity .3s;opacity:.25}
+.ch #c-ring{width:48px;height:48px;opacity:.5;border-color:var(--blue)}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem)}
+.ew{font-family:var(--fb);font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:.5rem}
+.ew::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.8rem;font-weight:500;padding:.85rem 1.75rem;border-radius:100px;border:none;cursor:none;white-space:nowrap;transition:transform .3s var(--ease),opacity .2s;letter-spacing:.02em}
+.btn svg{flex-shrink:0;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translate(3px,-3px)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{opacity:.88;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--w60);border:1px solid var(--bd)}.btn-ghost:hover{border-color:var(--w30);color:var(--white);transform:translateY(-2px)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;transition:padding .4s var(--ease),background .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.stuck{background:rgba(8,8,8,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-color:var(--bd);padding:1rem 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.logo-wmark{font-family:var(--fs);font-size:1.25rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--white);line-height:1}
+.logo-sub{font-family:var(--fb);font-size:.52rem;font-weight:300;letter-spacing:.28em;text-transform:uppercase;color:var(--w30);display:block;margin-top:.1rem}
+.logo-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-left:.1rem;margin-bottom:.5rem;align-self:flex-end}
+.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
+.nav-links a{font-size:.72rem;font-weight:400;color:var(--w30);letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.72rem;font-weight:500;letter-spacing:.04em;padding:.65rem 1.4rem;border-radius:100px;background:var(--blue);color:#fff;transition:opacity .2s,transform .3s var(--ease);cursor:none}
+.nav-cta:hover{opacity:.88;transform:translateY(-1px)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:4px}
+.nav-toggle span{display:block;width:20px;height:1px;background:var(--w60);border-radius:1px;transition:.3s var(--ease)}
+.nav-toggle.open span:nth-child(1){transform:rotate(45deg) translate(3.5px,3.5px)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(3.5px,-3.5px)}
+.nav-mob{position:fixed;inset:0;background:var(--black);z-index:99;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.25rem;padding:0 clamp(2rem,8vw,6rem);opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.nav-mob.open{opacity:1;visibility:visible}
+.nav-mob a{font-family:var(--fs);font-size:clamp(2.2rem,7vw,5rem);font-weight:800;color:var(--w30);line-height:1.2;transition:color .2s;letter-spacing:-.02em}
+.nav-mob a:hover{color:var(--white)}
+.nav-mob-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--w30);font-size:.9rem;cursor:none;font-family:var(--fb);transition:color .2s}
+footer{background:var(--black);border-top:1px solid var(--bd);padding:3.5rem 0 2rem}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--bd)}
+.ft-tagline{font-size:.72rem;font-weight:300;color:var(--w30);margin-top:.75rem;max-width:200px;line-height:1.65}
+.ft-nav{display:flex;gap:4rem;flex-wrap:wrap}
+.ft-col h5{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w30);margin-bottom:1.25rem}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.ft-col a{font-size:.78rem;font-weight:300;color:var(--w30);transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem}
+.ft-copy{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.18)}
+.ft-policy{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.22);transition:color .2s}
+.ft-policy:hover{color:var(--w60)}
+.page-hero{padding:clamp(9rem,14vw,12rem) 0 clamp(4rem,7vw,6rem);background:var(--black);border-bottom:1px solid var(--bd);position:relative;overflow:hidden}
+.ph-grain{position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;opacity:.03}
+.ph-glow{position:absolute;top:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(79,126,255,.09) 0%,transparent 65%);pointer-events:none}
+.ph-label{display:block;margin-bottom:1.5rem}
+.ph-h1{font-family:var(--fs);font-size:clamp(2.6rem,5.5vw,5rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:var(--white);position:relative;z-index:1}
+.ph-h1 .acc{color:var(--blue)}
+.ph-sub{font-size:.93rem;font-weight:300;line-height:1.88;color:var(--w30);max-width:520px;margin-top:1.5rem;position:relative;z-index:1}
+.section{padding:clamp(5rem,9vw,8rem) 0}
+.sh-h2{font-family:var(--fs);font-size:clamp(2rem,4.5vw,3.8rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:var(--white);margin-bottom:clamp(2.5rem,4vw,3.5rem)}
+.sh-h2 .acc{color:var(--blue)}
+.sh-h2 em{font-style:normal;color:var(--w12);text-decoration:line-through;text-decoration-color:rgba(79,126,255,.35)}
+@media(max-width:768px){body{cursor:auto}#cur{display:none}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.ft-top{flex-direction:column}.ft-nav{gap:2rem}}
+    .filosofia{background:var(--black);border-bottom:1px solid var(--bd)}
+    .fil-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start}
+    .fil-h2{font-family:var(--fs);font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--white);margin-top:1.25rem;margin-bottom:1.5rem}
+    .fil-h2 .acc{color:var(--blue)}
+    .fil-body{display:flex;flex-direction:column;gap:1.75rem}
+    .fil-p{font-size:.9rem;font-weight:300;line-height:1.88;color:var(--w30)}
+    .fil-p strong{color:var(--w60);font-weight:400}
+    .fil-quote{border-left:2px solid var(--blue);padding-left:1.5rem}
+    .fil-quote p{font-family:var(--fs);font-size:1.15rem;font-weight:700;line-height:1.45;color:var(--white);letter-spacing:-.01em}
+    .valores{background:var(--black-2);border-bottom:1px solid var(--bd)}
+    .val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+    .val-item{background:var(--black-3);padding:2.25rem 2rem;transition:background .3s}
+    .val-item:hover{background:var(--black-4)}
+    .val-n{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);opacity:.7;margin-bottom:1.5rem}
+    .val-title{font-family:var(--fs);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.75rem;letter-spacing:-.01em}
+    .val-desc{font-size:.83rem;font-weight:300;line-height:1.8;color:var(--w30)}
+    .fundador{background:var(--black);border-bottom:1px solid var(--bd)}
+    .fund-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:center}
+    .fund-photo{border-radius:16px;overflow:hidden;aspect-ratio:3/4;position:relative;border:1px solid var(--bd)}
+    .fund-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+    .fund-photo-cap{position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(to top,rgba(8,8,8,.9),transparent)}
+    .fund-name{font-family:var(--fs);font-size:1.35rem;font-weight:800;color:var(--white);letter-spacing:-.02em}
+    .fund-role{font-size:.62rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--w30);margin-top:.3rem}
+    .fund-h2{font-family:var(--fs);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.15;letter-spacing:-.03em;color:var(--white);margin-top:1.25rem;margin-bottom:1.5rem}
+    .fund-h2 .acc{color:var(--blue)}
+    .fund-p{font-size:.9rem;font-weight:300;line-height:1.88;color:var(--w30);margin-bottom:1.5rem}
+    .fund-p strong{color:var(--w60);font-weight:400}
+    .sb-cta{background:var(--black-3);text-align:center;position:relative;overflow:hidden;padding:clamp(5rem,9vw,7rem) 0}
+    .sb-cta::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;opacity:.028}
+    .sb-cta-wm{position:absolute;top:50%;left:50%;transform:translate(-48%,-50%);font-family:var(--fs);font-size:clamp(10rem,18vw,26rem);font-weight:800;letter-spacing:.25em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.038);line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
+    .sb-cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(79,126,255,.1) 0%,transparent 65%);pointer-events:none}
+    .sb-cta-in{position:relative;z-index:2}
+    .sb-cta-h2{font-family:var(--fs);font-size:clamp(2rem,4vw,3.5rem);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--white);margin:1.5rem 0 1rem}
+    .sb-cta-h2 .acc{color:var(--blue)}
+    .sb-cta-sub{font-size:.88rem;font-weight:300;color:var(--w30);line-height:1.8;max-width:340px;margin:0 auto 2.5rem}
+    @media(max-width:1024px){.fil-grid,.fund-grid{grid-template-columns:1fr}.val-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.val-grid{grid-template-columns:1fr}}
+  </style>
+
+<style>
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s,box-shadow .3s;cursor:none}
+.wa-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 8px 28px rgba(37,211,102,.5)}
+.back-top{position:fixed;bottom:96px;right:28px;z-index:999;width:40px;height:40px;border-radius:50%;background:rgba(14,14,14,.9);border:1px solid rgba(255,255,255,.1);color:rgba(245,242,238,.6);display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;opacity:0;pointer-events:none;backdrop-filter:blur(10px)}
+.back-top.visible{opacity:1;pointer-events:all}
+.back-top:hover{border-color:var(--blue, #4F7EFF);color:var(--blue, #4F7EFF);transform:translateY(-2px)}
+@media(max-width:768px){.wa-float{bottom:20px;right:20px;width:50px;height:50px;cursor:auto}.back-top{bottom:82px;right:20px;cursor:auto}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "João Vitor Cassiano",
+  "jobTitle": "Fundador",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Ware Jurídico",
+    "url": "https://warejuridico.com.br"
+  },
+  "url": "https://warejuridico.com.br/sobre.html",
+  "sameAs": ["https://www.linkedin.com/company/warejuridico","https://www.instagram.com/warejuridico"]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Início","item":"https://warejuridico.com.br/"},
+  {"@type":"ListItem","position":2,"name":"Sobre","item":"https://warejuridico.com.br/sobre.html"}
+]}</script>
+
+<style>
+/* POPUP */
+.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:10000;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;backdrop-filter:blur(6px)}
+.popup-overlay.open{opacity:1;visibility:visible}
+.popup-box{background:var(--black-2, #0e0e0e);border:1px solid rgba(79,126,255,.25);border-radius:20px;padding:clamp(2rem,5vw,3rem);width:100%;max-width:480px;position:relative;transform:translateY(20px);transition:transform .4s cubic-bezier(.16,1,.3,1);overflow:hidden}
+.popup-overlay.open .popup-box{transform:translateY(0)}
+.popup-box::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,#4F7EFF,transparent)}
+.popup-close{position:absolute;top:1.1rem;right:1.1rem;background:none;border:none;color:rgba(245,242,238,.3);font-size:1.1rem;cursor:none;line-height:1;transition:color .2s;font-family:inherit;padding:.25rem}
+.popup-close:hover{color:rgba(245,242,238,.8)}
+.popup-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(79,126,255,.3);background:rgba(79,126,255,.08);padding:4px 12px;border-radius:100px;font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(79,126,255,.9);margin-bottom:1.25rem}
+.popup-badge::before{content:'';width:4px;height:4px;border-radius:50%;background:#4F7EFF}
+.popup-h{font-family:'Sora',sans-serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;line-height:1.15;letter-spacing:-.03em;color:#f5f2ee;margin-bottom:.6rem}
+.popup-h .acc{color:#4F7EFF}
+.popup-sub{font-size:.82rem;font-weight:300;line-height:1.75;color:rgba(245,242,238,.4);margin-bottom:1.75rem}
+.popup-form{display:flex;flex-direction:column;gap:.9rem}
+.popup-group{display:flex;flex-direction:column;gap:.4rem}
+.popup-label{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,238,.35)}
+.popup-input,.popup-select{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:300;color:#f5f2ee;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:.8rem 1rem;outline:none;width:100%;transition:border-color .25s,box-shadow .25s;cursor:none}
+.popup-input::placeholder{color:rgba(245,242,238,.2)}
+.popup-input:focus,.popup-select:focus{border-color:#4F7EFF;box-shadow:0 0 0 3px rgba(79,126,255,.1)}
+.popup-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%234F7EFF' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.popup-select option{background:#141414;color:#f5f2ee}
+.popup-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;padding:.9rem 1.5rem;border-radius:100px;border:none;background:#4F7EFF;color:#fff;cursor:none;transition:opacity .2s,transform .3s;margin-top:.4rem;letter-spacing:.02em}
+.popup-btn:hover{opacity:.88;transform:translateY(-2px)}
+.popup-note{font-size:.68rem;font-weight:300;color:rgba(245,242,238,.2);text-align:center;margin-top:.5rem;line-height:1.55}
+.popup-success{display:none;text-align:center;padding:1rem 0}
+.popup-success-icon{font-size:2.5rem;margin-bottom:1rem}
+.popup-success-title{font-family:'Sora',sans-serif;font-size:1.4rem;font-weight:800;color:#f5f2ee;letter-spacing:-.02em;margin-bottom:.5rem}
+.popup-success-sub{font-size:.85rem;font-weight:300;color:rgba(245,242,238,.4);line-height:1.7}
+@media(max-width:480px){.popup-input,.popup-select{cursor:auto}.popup-btn{cursor:auto}.popup-close{cursor:auto}}
+</style>
+<style>
+input,select,textarea,button[type="submit"]{cursor:auto!important}
+@media(min-width:769px){input,select,textarea{cursor:text!important}button[type="submit"]{cursor:pointer!important}}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="cur" aria-hidden="true"><div id="c-ring"></div><div id="c-dot"></div></div>
+<header>
+  <nav class="nav" id="nav" role="navigation"><div class="wrap"><div class="nav-inner">
+    <a href="/" class="logo"><div><span class="logo-wmark">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot" aria-hidden="true"></div></a>
+    <ul class="nav-links" role="list"><li><a href="/">Início</a></li><li><a href="/servicos.html">Serviços</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/sobre.html" class="active">Sobre</a></li><li><a href="/contato.html">Contato</a></li></ul>
+    <a href="https://wa.link/aqib9n" class="nav-cta" target="_blank" rel="noopener noreferrer">Diagnóstico gratuito <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div></div></nav>
+  <nav class="nav-mob" id="navMob" role="dialog" aria-modal="true"><button class="nav-mob-close" id="navClose">Fechar</button><a href="/">Início</a><a href="/servicos.html">Serviços</a><a href="/blog.html">Blog</a><a href="/faq.html">FAQ</a><a href="/sobre.html">Sobre</a><a href="/contato.html">Contato</a><a href="https://wa.link/aqib9n" target="_blank" rel="noopener noreferrer">WhatsApp</a></nav>
+</header>
+<main>
+  <section class="page-hero" aria-labelledby="ph-title">
+    <div class="ph-grain" aria-hidden="true"></div><div class="ph-glow" aria-hidden="true"></div>
+    <div class="wrap"><span class="ew ph-label">Nossa história</span><h1 class="ph-h1" id="ph-title">Uma agência criada para quem acredita que bons advogados merecem ser <span class="acc">encontrados.</span></h1><p class="ph-sub">A Ware nasceu da observação de um problema real: advogados competentes sendo superados digitalmente por escritórios menores em qualidade, maiores em visibilidade.</p></div>
+  </section>
+
+  <section class="section filosofia" aria-labelledby="fil-title">
+    <div class="wrap"><div class="fil-grid">
+      <div><span class="ew">Nossa filosofia</span><h2 class="fil-h2" id="fil-title">Não vendemos marketing.<br>Vendemos <span class="acc">transformação.</span></h2></div>
+      <div class="fil-body">
+        <p class="fil-p">O mercado jurídico brasileiro tem mais de 1,3 milhão de advogados inscritos na OAB. A competição nunca foi tão acirrada — e ao mesmo tempo, a maioria dos escritórios ainda depende exclusivamente de indicação para crescer.</p>
+        <div class="fil-quote"><p>"Bons advogados merecem ser encontrados por quem mais precisa deles."</p></div>
+        <p class="fil-p">Essa frase não é um slogan. É a razão de existir da Ware. <strong>Acreditamos que a distância entre um advogado competente e o cliente que precisa dele não deveria ser uma questão de marketing — mas hoje, é.</strong></p>
+        <p class="fil-p">Por isso somos uma agência 100% focada no mercado jurídico — tudo que fazemos foi desenhado para esse mercado específico, com suas regras, sua linguagem e suas particularidades.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section valores" aria-labelledby="val-title">
+    <div class="wrap">
+      <span class="ew" style="display:block;margin-bottom:1.25rem">O que nos guia</span>
+      <h2 class="sh-h2" id="val-title">Os valores que <span class="acc">definem</span> como trabalhamos.</h2>
+      <div class="val-grid" role="list">
+        <div class="val-item" role="listitem"><p class="val-n">01</p><h3 class="val-title">Especialização total</h3><p class="val-desc">Não atendemos outros segmentos. Toda nossa energia e metodologia é voltada exclusivamente para o mercado jurídico.</p></div>
+        <div class="val-item" role="listitem"><p class="val-n">02</p><h3 class="val-title">Ética acima de tudo</h3><p class="val-desc">Trabalhamos dentro do Provimento 205/2021 da OAB. Jamais colocamos nossos clientes em risco ético por um resultado de curto prazo.</p></div>
+        <div class="val-item" role="listitem"><p class="val-n">03</p><h3 class="val-title">Transparência real</h3><p class="val-desc">Relatórios mensais com dados reais. Você sabe exatamente o que está sendo feito e que resultado está gerando.</p></div>
+        <div class="val-item" role="listitem"><p class="val-n">04</p><h3 class="val-title">Visão de negócio</h3><p class="val-desc">Tratamos o escritório do nosso cliente como um negócio. Posicionamento, precificação e crescimento fazem parte do nosso escopo.</p></div>
+        <div class="val-item" role="listitem"><p class="val-n">05</p><h3 class="val-title">Resultado previsível</h3><p class="val-desc">Estruturamos canais que funcionam independente de indicação. Crescimento planejável, não dependente da sorte.</p></div>
+        <div class="val-item" role="listitem"><p class="val-n">06</p><h3 class="val-title">Parceria de longo prazo</h3><p class="val-desc">Não vendemos projetos pontuais. Construímos relações duradouras — porque presença digital se constrói com consistência.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fundador" aria-labelledby="fund-title">
+    <div class="wrap"><div class="fund-grid">
+      <div class="fund-photo">
+        <img src="/assets/joao.jpg" alt="João Vitor Cassiano, fundador da Ware Jurídico — agência de marketing para advogados" loading="lazy"/>
+        <div class="fund-photo-cap"><p class="fund-name">João Vitor Cassiano</p><p class="fund-role">Fundador · Ware Jurídico</p></div>
+      </div>
+      <div>
+        <span class="ew">Quem está por trás</span>
+        <h2 class="fund-h2" id="fund-title">Uma visão clara sobre o que o advogado-empresário <span class="acc">precisa.</span></h2>
+        <p class="fund-p">A Ware Jurídico foi fundada com uma convicção simples: <strong>o mercado jurídico precisava de uma agência que falasse a sua língua.</strong> Não uma agência que adapta serviços genéricos para o direito — uma que foi construída, desde o início, para esse mercado.</p>
+        <p class="fund-p">Ao longo dos anos trabalhando com advogados, ficou claro que a grande maioria dos profissionais competentes compartilhava o mesmo problema: tinham qualidade técnica, tinham ética, tinham experiência — mas dependiam de indicação para crescer.</p>
+        <p class="fund-p"><strong>A Ware existe para mudar isso.</strong> Para ser a estrutura que o advogado-empresário precisa — não apenas no marketing, mas na visão estratégica do seu negócio.</p>
+        <a href="/contato.html" class="btn btn-ghost">Fale com a gente <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="sb-cta" aria-labelledby="sbcta-title">
+    <div class="sb-cta-glow" aria-hidden="true"></div><div class="sb-cta-wm" aria-hidden="true">WARE</div>
+    <div class="wrap"><div class="sb-cta-in">
+      <span class="ew" style="justify-content:center">Próximo passo</span>
+      <h2 class="sb-cta-h2" id="sbcta-title">Seu escritório merece uma presença digital à <span class="acc">altura do seu trabalho.</span></h2>
+      <p class="sb-cta-sub">Diagnóstico gratuito. 30 minutos. Sem compromisso.</p>
+      <a href="https://wa.link/aqib9n" class="btn btn-blue" target="_blank" rel="noopener noreferrer">Falar com a Ware pelo WhatsApp <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div></div>
+  </section>
+
+
+</main>
+<footer role="contentinfo"><div class="wrap">
+  <div class="ft-top"><div><div class="logo"><div><span class="logo-wmark" style="color:rgba(245,242,238,.35)">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot"></div></div><p class="ft-tagline">Agência de marketing 100% focada no mercado jurídico.</p></div>
+  <nav class="ft-nav"><div class="ft-col"><h5>Serviços</h5><ul><li><a href="/servicos.html#trafego">Tráfego Pago</a></li><li><a href="/servicos.html#site">Site Profissional</a></li><li><a href="/servicos.html#redes">Redes Sociais</a></li><li><a href="/servicos.html#google">Google Meu Negócio</a></li></ul></div><div class="ft-col"><h5>Empresa</h5><ul><li><a href="/sobre.html">Sobre a Ware</a></li><li><a href="/metodo.html">Nosso Método</a></li><li><a href="/diagnostico.html">Diagnóstico Gratuito</a></li><li><a href="/parceiros.html">Seja Parceiro</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contato.html">Contato</a></li></ul></div></nav></div>
+  <div class="ft-bot"><p class="ft-copy">© 2025 Ware Jurídico. Todos os direitos reservados.</p><a href="/politica-de-privacidade.html" class="ft-policy">Política de Privacidade</a></div>
+</div></footer>
+
+</body></html>
