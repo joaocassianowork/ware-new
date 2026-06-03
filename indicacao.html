@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico Gratuito | Ware Jurídico</title>
+  <meta name="description" content="Solicite seu diagnóstico gratuito de marketing jurídico."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N6PHGW3L');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    /* =============================================
+       DESIGN TOKENS
+    ============================================= */
+    :root {
+      --black:    #080808;
+      --black-2:  #0e0e0e;
+      --black-3:  #141414;
+      --blue:     #4F7EFF;
+      --blue-dim: rgba(79,126,255,.1);
+      --blue-bd:  rgba(79,126,255,.22);
+      --white:    #f5f2ee;
+      --w80:      rgba(245,242,238,.8);
+      --w60:      rgba(245,242,238,.6);
+      --w30:      rgba(245,242,238,.3);
+      --bd:       rgba(255,255,255,.07);
+      --bd2:      rgba(255,255,255,.13);
+      --red:      #ef4444;
+      --green:    #22c55e;
+      --fs:       'Sora', sans-serif;
+      --fb:       'DM Sans', sans-serif;
+
+      /* Tamanhos mobile-first */
+      --radius-card: 14px;
+      --radius-input: 10px;
+      --radius-btn:   12px;
+      --pad-card: 1.25rem;
+      --gap-form: 1rem;
+    }
+
+    /* =============================================
+       RESET
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body {
+      font-family: var(--fb);
+      background: var(--black);
+      color: var(--white);
+      font-size: 16px;
+      min-height: 100svh;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    input, select, textarea, button { font-family: var(--fb); }
+
+    /* =============================================
+       SCROLLBAR
+    ============================================= */
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
+
+    /* =============================================
+       PAGE SHELL
+    ============================================= */
+    .page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    /* =============================================
+       LOGO
+    ============================================= */
+    .top-logo {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      margin-bottom: 2rem;
+      align-self: flex-start;
+    }
+    .logo-mark {
+      font-family: var(--fs);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1;
+    }
+    .logo-sub {
+      font-size: .42rem;
+      font-weight: 300;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--w30);
+      display: block;
+      margin-top: .1rem;
+    }
+    .logo-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+      margin-left: .05rem;
+      margin-bottom: .35rem;
+      align-self: flex-end;
+    }
+
+    /* =============================================
+       CARD CONTAINER
+    ============================================= */
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--black-2);
+      border: 1px solid var(--bd);
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+
+    /* =============================================
+       PROGRESS BAR
+    ============================================= */
+    .prog-wrap {
+      padding: 1.25rem var(--pad-card) 0;
+    }
+    .prog-steps {
+      display: flex;
+      align-items: center;
+      margin-bottom: .75rem;
+    }
+    .ps {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+    }
+    .ps-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1.5px solid var(--bd2);
+      background: var(--black-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fs);
+      font-size: .62rem;
+      font-weight: 700;
+      color: var(--w30);
+      flex-shrink: 0;
+      transition: all .35s;
+    }
+    .ps.active .ps-circle {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+      box-shadow: 0 0 0 4px var(--blue-dim);
+    }
+    .ps.done .ps-circle {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+    .ps-label {
+      font-size: .68rem;
+      font-weight: 500;
+      color: var(--w30);
+      white-space: nowrap;
+      transition: color .3s;
+    }
+    .ps.active .ps-label { color: var(--white); }
+    .ps-line {
+      flex: 1;
+      height: 1.5px;
+      background: var(--bd2);
+      margin: 0 .5rem;
+      transition: background .4s;
+    }
+    .ps-line.done { background: var(--blue); }
+    .prog-track {
+      height: 2px;
+      background: var(--bd2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .prog-fill {
+      height: 100%;
+      background: var(--blue);
+      border-radius: 2px;
+      transition: width .45s cubic-bezier(.4,0,.2,1);
+      width: 50%;
+    }
+
+    /* =============================================
+       STEP SLIDES
+    ============================================= */
+    .steps-viewport {
+      overflow: hidden;
+      position: relative;
+    }
+    .steps-track {
+      display: flex;
+      width: 200%;
+      transition: transform .38s cubic-bezier(.4,0,.2,1);
+    }
+    .step {
+      width: 50%;
+      flex-shrink: 0;
+      padding: 1.5rem var(--pad-card) 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-form);
+    }
+
+    /* =============================================
+       SECTION HEAD
+    ============================================= */
+    .partner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--blue-dim);
+      border: 1px solid var(--blue-bd);
+      border-radius: 100px;
+      padding: .26rem .75rem;
+      margin-bottom: .25rem;
+    }
+    .partner-badge span {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .step-title {
+      font-family: var(--fs);
+      font-size: clamp(1.2rem, 5vw, 1.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      color: var(--white);
+    }
+    .step-sub {
+      font-size: .82rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--w30);
+      margin-top: .35rem;
+    }
+    .step-sub strong { color: var(--w60); font-weight: 500; }
+
+    /* =============================================
+       FIELDS
+    ============================================= */
+    .field { display: flex; flex-direction: column; gap: .38rem; }
+    .field-label {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--w30);
+    }
+    .req { color: var(--blue); }
+
+    .field-input {
+      background: var(--black-3);
+      border: 1.5px solid var(--bd);
+      border-radius: var(--radius-input);
+      padding: .88rem 1rem;
+      font-size: .9rem;
+      color: var(--white);
+      outline: none;
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: border-color .2s, box-shadow .2s;
+      /* Mínimo de 44px para tap target */
+      min-height: 48px;
+    }
+    .field-input::placeholder { color: var(--w30); }
+    .field-input:focus {
+      border-color: var(--blue-bd);
+      box-shadow: 0 0 0 3px var(--blue-dim);
+    }
+    .field-input.err { border-color: var(--red); }
+    .field-input.ok  { border-color: rgba(34,197,94,.35); }
+
+    /* Datalist / combobox */
+    .field-input[list] { cursor: text; }
+
+    /* Textarea */
+    textarea.field-input {
+      resize: vertical;
+      min-height: 80px;
+      line-height: 1.6;
+    }
+
+    .field-err {
+      font-size: .7rem;
+      color: var(--red);
+      display: none;
+    }
+    .field-err.show { display: block; }
+
+    /* Grid 2 colunas — só desktop */
+    .g2 { display: flex; flex-direction: column; gap: var(--gap-form); }
+
+    /* =============================================
+       RADIO OPTIONS
+    ============================================= */
+    .radio-group { display: flex; flex-direction: column; gap: .55rem; }
+    .radio-opt {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      background: var(--black-3);
+      border: 1.5px solid var(--bd);
+      border-radius: var(--radius-input);
+      padding: .9rem 1rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 52px;
+    }
+    .radio-opt:active { opacity: .85; }
+    .radio-opt.sel {
+      border-color: var(--blue-bd);
+      background: var(--blue-dim);
+    }
+    .rdot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.5px solid var(--bd2);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .radio-opt.sel .rdot {
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+    .rdot-inner {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .radio-opt.sel .rdot-inner { opacity: 1; }
+    .radio-txt {
+      font-size: .84rem;
+      font-weight: 400;
+      color: var(--w60);
+      line-height: 1.4;
+      transition: color .2s;
+    }
+    .radio-opt.sel .radio-txt { color: var(--white); }
+
+    /* =============================================
+       CHECKBOXES
+    ============================================= */
+    .check-group { display: flex; flex-direction: column; gap: .55rem; }
+    .check-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      background: var(--black-3);
+      border: 1.5px solid var(--bd);
+      border-radius: var(--radius-input);
+      padding: .9rem 1rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 52px;
+    }
+    .check-opt:active { opacity: .85; }
+    .check-opt.sel {
+      border-color: var(--blue-bd);
+      background: var(--blue-dim);
+    }
+    .cbox {
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      border: 1.5px solid var(--bd2);
+      flex-shrink: 0;
+      margin-top: .1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .check-opt.sel .cbox {
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+    .cbox svg { opacity: 0; transition: opacity .2s; }
+    .check-opt.sel .cbox svg { opacity: 1; }
+    .check-txt {
+      font-size: .84rem;
+      font-weight: 400;
+      color: var(--w60);
+      line-height: 1.4;
+      transition: color .2s;
+    }
+    .check-opt.sel .check-txt { color: var(--white); }
+    .outro-wrap { display: none; }
+    .outro-wrap.show { display: block; margin-top: .55rem; }
+
+    /* =============================================
+       CARD SELECT (urgência / estrutura)
+    ============================================= */
+    .csel-group { display: flex; flex-direction: column; gap: .55rem; }
+    .csel {
+      background: var(--black-3);
+      border: 1.5px solid var(--bd);
+      border-radius: var(--radius-input);
+      padding: .9rem 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+      transition: border-color .2s, background .2s;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 60px;
+    }
+    .csel:active { opacity: .85; }
+    .csel.sel {
+      border-color: var(--blue-bd);
+      background: var(--blue-dim);
+    }
+    .csel-body { display: flex; flex-direction: column; gap: .18rem; }
+    .csel-title {
+      font-family: var(--fs);
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--w80);
+      letter-spacing: -.01em;
+      transition: color .2s;
+      line-height: 1.2;
+    }
+    .csel.sel .csel-title { color: var(--white); }
+    .csel-desc {
+      font-size: .74rem;
+      font-weight: 300;
+      color: var(--w30);
+      line-height: 1.3;
+    }
+    .csel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bd2);
+      flex-shrink: 0;
+      transition: background .2s;
+    }
+    .csel.sel .csel-dot { background: var(--blue); }
+
+    /* =============================================
+       BOTÕES
+    ============================================= */
+    .btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .01em;
+      transition: opacity .2s, transform .15s, box-shadow .2s;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 52px;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(79,126,255,.22);
+      flex-direction: column;
+      gap: .15rem;
+    }
+    .btn-primary:hover:not(:disabled) {
+      opacity: .92;
+      box-shadow: 0 12px 32px rgba(79,126,255,.3);
+    }
+    .btn-primary-label { font-size: .9rem; font-weight: 700; }
+    .btn-primary-sub { font-size: .68rem; font-weight: 400; opacity: .75; letter-spacing: .04em; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--w30);
+      border: 1.5px solid var(--bd);
+    }
+    .btn-ghost:hover { border-color: var(--bd2); color: var(--w60); }
+
+    .btn-wa  { background: #25D366; color: #fff; }
+    .btn-ig  { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+    .btn-wa:hover, .btn-ig:hover { opacity: .92; }
+
+    /* Loading */
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      display: none;
+      flex-shrink: 0;
+    }
+    .btn-primary.loading .spinner { display: block; }
+    .btn-primary.loading .btn-primary-label,
+    .btn-primary.loading .btn-primary-sub { display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* =============================================
+       OBRIGADO
+    ============================================= */
+    .thank-you {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 480px;
+      animation: fadeUp .5s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Checkmark animado */
+    .ty-icon-wrap {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: var(--blue-dim);
+      border: 1px solid var(--blue-bd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .ty-check {
+      width: 32px;
+      height: 32px;
+    }
+    .ty-check path {
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: drawCheck .6s .2s cubic-bezier(.4,0,.2,1) forwards;
+    }
+    @keyframes drawCheck {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .ty-title {
+      font-family: var(--fs);
+      font-size: clamp(1.4rem,5vw,1.9rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--white);
+      margin-bottom: .5rem;
+    }
+    .ty-sub {
+      font-size: .85rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--w60);
+      max-width: 380px;
+      margin-bottom: 2rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      width: 100%;
+      background: var(--black-2);
+      border: 1px solid var(--bd);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+    .tl-head {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    .tl-head::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+    .tl-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .tl-list::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 8px; bottom: 8px;
+      width: 1.5px;
+      background: linear-gradient(to bottom, var(--blue), rgba(79,126,255,.15));
+    }
+    .tl-item { padding: .7rem 0; position: relative; }
+    .tl-item:first-child { padding-top: 0; }
+    .tl-item:last-child  { padding-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: -1.25rem;
+      top: .85rem;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      border: 2px solid var(--blue);
+      background: var(--black-2);
+      z-index: 1;
+    }
+    .tl-item:first-child .tl-dot { background: var(--blue); top: .05rem; }
+    .tl-when {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: .2rem;
+    }
+    .tl-item:not(:first-child) .tl-when { color: var(--w30); }
+    .tl-what {
+      font-family: var(--fs);
+      font-size: .84rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: .15rem;
+      letter-spacing: -.01em;
+    }
+    .tl-desc {
+      font-size: .76rem;
+      font-weight: 300;
+      color: var(--w30);
+      line-height: 1.55;
+    }
+
+    /* CTA pós-obrigado */
+    .ty-cta-label {
+      font-size: .78rem;
+      font-weight: 300;
+      color: var(--w30);
+      margin-bottom: .85rem;
+    }
+    .ty-btns {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+
+    /* =============================================
+       NOT FOUND
+    ============================================= */
+    .not-found {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 360px;
+      padding: 1rem 0 2rem;
+      gap: .75rem;
+    }
+    .nf-line {
+      width: 32px;
+      height: 2px;
+      background: var(--bd2);
+      border-radius: 2px;
+    }
+    .nf-title {
+      font-family: var(--fs);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .nf-desc {
+      font-size: .82rem;
+      font-weight: 300;
+      color: var(--w30);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    .page-footer {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .page-footer p {
+      font-size: .63rem;
+      font-weight: 300;
+      color: var(--w30);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       DESKTOP — enhancements only
+    ============================================= */
+    @media (min-width: 540px) {
+      .page { padding: 2.5rem 1.5rem 4rem; }
+      :root { --pad-card: 2rem; --gap-form: 1.1rem; }
+      .g2 { flex-direction: row; }
+      .g2 > * { flex: 1; }
+      .card { border-radius: 22px; }
+      .btn-primary { flex-direction: row; gap: .5rem; }
+      .btn-primary-sub { display: none; }
+    }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="page">
+
+  <!-- LOGO -->
+  <a href="/" class="top-logo">
+    <div>
+      <span class="logo-mark">WARE</span>
+      <span class="logo-sub">Marketing Jurídico</span>
+    </div>
+    <div class="logo-dot"></div>
+  </a>
+
+  <!-- CARD FORMULÁRIO -->
+  <div class="card" id="formCard">
+
+    <!-- PROGRESSO -->
+    <div class="prog-wrap">
+      <div class="prog-steps">
+        <div class="ps active" id="ps1">
+          <div class="ps-circle"><span>1</span></div>
+          <span class="ps-label">Seus dados</span>
+        </div>
+        <div class="ps-line" id="pline"></div>
+        <div class="ps active" id="ps2" style="justify-content:flex-end">
+          <span class="ps-label">Seu escritório</span>
+          <div class="ps-circle"><span>2</span></div>
+        </div>
+      </div>
+      <div class="prog-track">
+        <div class="prog-fill" id="progFill"></div>
+      </div>
+    </div>
+
+    <!-- VIEWPORT DOS STEPS -->
+    <div class="steps-viewport">
+      <div class="steps-track" id="stepsTrack">
+
+        <!-- PASSO 1 -->
+        <div class="step" id="step1">
+          <div>
+            <div class="partner-badge" id="partnerBadge" style="display:none">
+              <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="4" stroke="#4F7EFF" stroke-width="1.2"/>
+                <path d="M3 5l1.5 1.5L7 3.5" stroke="#4F7EFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span id="partnerBadgeText"></span>
+            </div>
+            <h1 class="step-title" id="step1Title">Solicite seu diagnóstico gratuito</h1>
+            <p class="step-sub" id="step1Sub">Preencha os dados abaixo. A <strong>Ware Jurídico</strong> entra em contato em até 24 horas com uma análise personalizada.</p>
+          </div>
+
+          <div class="g2">
+            <div class="field">
+              <label class="field-label" for="f-name">Nome completo <span class="req">*</span></label>
+              <input class="field-input" type="text" id="f-name"
+                placeholder="Dr. João Silva"
+                autocomplete="name"
+                inputmode="text"/>
+              <span class="field-err" id="e-name">Informe seu nome completo</span>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-wa">WhatsApp <span class="req">*</span></label>
+              <input class="field-input" type="tel" id="f-wa"
+                placeholder="(11) 99999-9999"
+                autocomplete="tel"
+                inputmode="numeric"/>
+              <span class="field-err" id="e-wa">Número inválido</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-area">Área de atuação <span class="req">*</span></label>
+            <input class="field-input" type="text" id="f-area"
+              list="areas-list"
+              placeholder="Ex: Direito Trabalhista"
+              autocomplete="off"/>
+            <datalist id="areas-list">
+              <option>Direito Trabalhista</option>
+              <option>Direito de Família</option>
+              <option>Direito Empresarial</option>
+              <option>Direito Tributário</option>
+              <option>Direito Imobiliário</option>
+              <option>Direito Previdenciário</option>
+              <option>Direito Criminal</option>
+              <option>Direito do Consumidor</option>
+              <option>Direito Civil</option>
+              <option>Direito Administrativo</option>
+              <option>Direito Ambiental</option>
+              <option>Direito da Saúde</option>
+              <option>Direito de Trânsito</option>
+              <option>Direito Bancário</option>
+              <option>Direito Digital</option>
+              <option>Direito Eleitoral</option>
+              <option>Direito Imigratório</option>
+              <option>Direito Internacional</option>
+              <option>Propriedade Intelectual</option>
+              <option>Direito das Sucessões</option>
+            </datalist>
+            <span class="field-err" id="e-area">Informe sua área de atuação</span>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-city">Cidade <span class="req">*</span></label>
+            <input class="field-input" type="text" id="f-city"
+              placeholder="São Paulo"
+              inputmode="text"/>
+            <span class="field-err" id="e-city">Informe sua cidade</span>
+          </div>
+
+          <button class="btn btn-primary" id="btnNext" type="button">
+            <span class="btn-primary-label">Continuar</span>
+            <span class="btn-primary-sub">Passo 1 de 2</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0">
+              <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- PASSO 2 -->
+        <div class="step" id="step2">
+          <div>
+            <h2 class="step-title">Seu escritório</h2>
+            <p class="step-sub">Essas informações nos ajudam a preparar um diagnóstico mais preciso para a sua realidade.</p>
+          </div>
+
+          <!-- Marketing -->
+          <div class="field">
+            <label class="field-label">Relação com marketing hoje <span class="req">*</span></label>
+            <div class="radio-group" id="g-mkt">
+              <label class="radio-opt" onclick="pickRadio(this,'g-mkt','e-mkt')">
+                <div class="rdot"><div class="rdot-inner"></div></div>
+                <span class="radio-txt">Nunca investi — dependo 100% de indicações</span>
+              </label>
+              <label class="radio-opt" onclick="pickRadio(this,'g-mkt','e-mkt')">
+                <div class="rdot"><div class="rdot-inner"></div></div>
+                <span class="radio-txt">Já tentei algo, mas sem resultado</span>
+              </label>
+              <label class="radio-opt" onclick="pickRadio(this,'g-mkt','e-mkt')">
+                <div class="rdot"><div class="rdot-inner"></div></div>
+                <span class="radio-txt">Invisto atualmente e quero melhores resultados</span>
+              </label>
+            </div>
+            <span class="field-err" id="e-mkt">Selecione uma opção</span>
+          </div>
+
+          <!-- Desafios -->
+          <div class="field">
+            <label class="field-label">Maiores desafios do escritório <span class="req">*</span></label>
+            <div class="check-group" id="g-des">
+              <label class="check-opt" onclick="toggleCheck(this)">
+                <div class="cbox"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="check-txt">Não apareço no Google quando clientes me pesquisam</span>
+              </label>
+              <label class="check-opt" onclick="toggleCheck(this)">
+                <div class="cbox"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="check-txt">Não sei captar clientes além das indicações</span>
+              </label>
+              <label class="check-opt" onclick="toggleCheck(this)">
+                <div class="cbox"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="check-txt">Recebo contatos mas tenho dificuldade em converter</span>
+              </label>
+              <label class="check-opt" onclick="toggleCheck(this)">
+                <div class="cbox"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="check-txt">Não tenho tempo para cuidar do marketing</span>
+              </label>
+              <label class="check-opt" id="outroOpt" onclick="toggleCheck(this, true)">
+                <div class="cbox"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="check-txt">Outro</span>
+              </label>
+            </div>
+            <div class="outro-wrap" id="outroWrap">
+              <input class="field-input" type="text" id="outroInput" placeholder="Descreva seu maior desafio..."/>
+            </div>
+            <span class="field-err" id="e-des">Selecione ao menos um desafio</span>
+          </div>
+
+          <!-- Urgência -->
+          <div class="field">
+            <label class="field-label">Qual é o seu momento agora? <span class="req">*</span></label>
+            <div class="csel-group" id="g-urg">
+              <div class="csel" onclick="pickCard(this,'g-urg','e-urg')" data-v="pronto">
+                <div class="csel-body">
+                  <div class="csel-title">Estou pronto para começar</div>
+                  <div class="csel-desc">Já tomei a decisão e quero avançar</div>
+                </div>
+                <div class="csel-dot"></div>
+              </div>
+              <div class="csel" onclick="pickCard(this,'g-urg','e-urg')" data-v="comparando">
+                <div class="csel-body">
+                  <div class="csel-title">Estou comparando opções</div>
+                  <div class="csel-desc">Pesquisando antes de decidir</div>
+                </div>
+                <div class="csel-dot"></div>
+              </div>
+              <div class="csel" onclick="pickCard(this,'g-urg','e-urg')" data-v="conhecendo">
+                <div class="csel-body">
+                  <div class="csel-title">Ainda estou conhecendo o mercado</div>
+                  <div class="csel-desc">Quero entender melhor antes de qualquer passo</div>
+                </div>
+                <div class="csel-dot"></div>
+              </div>
+            </div>
+            <span class="field-err" id="e-urg">Selecione uma opção</span>
+          </div>
+
+          <!-- Estrutura -->
+          <div class="field">
+            <label class="field-label">Como é o seu escritório hoje? <span class="req">*</span></label>
+            <div class="csel-group" id="g-est">
+              <div class="csel" onclick="pickCard(this,'g-est','e-est')" data-v="solo">
+                <div class="csel-body">
+                  <div class="csel-title">Trabalho sozinho</div>
+                  <div class="csel-desc">Sou advogado individual</div>
+                </div>
+                <div class="csel-dot"></div>
+              </div>
+              <div class="csel" onclick="pickCard(this,'g-est','e-est')" data-v="pequeno">
+                <div class="csel-body">
+                  <div class="csel-title">Somos 2 a 3 pessoas</div>
+                  <div class="csel-desc">Pequeno escritório ou sociedade</div>
+                </div>
+                <div class="csel-dot"></div>
+              </div>
+              <div class="csel" onclick="pickCard(this,'g-est','e-est')" data-v="medio">
+                <div class="csel-body">
+                  <div class="csel-title">Mais de 3 pessoas</div>
+                  <div class="csel-desc">Escritório estruturado com equipe</div>
+                </div>
+                <div class="csel-dot"></div>
+              </div>
+            </div>
+            <span class="field-err" id="e-est">Selecione uma opção</span>
+          </div>
+
+          <!-- Campo livre -->
+          <div class="field">
+            <label class="field-label" for="f-livre">Quer nos contar algo mais?</label>
+            <textarea class="field-input" id="f-livre"
+              placeholder="Qualquer informação que queira compartilhar..."></textarea>
+          </div>
+
+          <!-- Botões -->
+          <div style="display:flex;flex-direction:column;gap:.65rem">
+            <button class="btn btn-primary" id="btnSubmit" type="button">
+              <div class="spinner"></div>
+              <span class="btn-primary-label">Solicitar diagnóstico gratuito</span>
+              <span class="btn-primary-sub">Gratuito · Sem compromisso</span>
+            </button>
+            <button class="btn btn-ghost" id="btnBack" type="button">Voltar</button>
+          </div>
+        </div>
+
+      </div><!-- /steps-track -->
+    </div><!-- /steps-viewport -->
+  </div><!-- /card -->
+
+  <!-- OBRIGADO -->
+  <div class="thank-you" id="thankYou">
+    <div class="ty-icon-wrap">
+      <svg class="ty-check" viewBox="0 0 32 32" fill="none">
+        <path d="M6 16l8 8 12-12"
+          stroke="#4F7EFF" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h2 class="ty-title">Diagnóstico solicitado.</h2>
+    <p class="ty-sub" id="tySub">Recebemos suas informações. Nossa equipe vai analisar seu perfil e entrar em contato em breve.</p>
+
+    <div class="timeline">
+      <div class="tl-head">Próximos passos</div>
+      <div class="tl-list">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-when">Agora</div>
+          <div class="tl-what">Solicitação registrada</div>
+          <div class="tl-desc">Suas informações foram recebidas e estão sendo analisadas pela nossa equipe.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-when">Ainda hoje</div>
+          <div class="tl-what">Análise do seu perfil</div>
+          <div class="tl-desc">Mapeamos sua presença digital, pesquisamos seus concorrentes e preparamos o diagnóstico personalizado.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-when">Na conversa</div>
+          <div class="tl-what">Diagnóstico e plano de ação</div>
+          <div class="tl-desc">Apresentamos onde você está perdendo clientes e o que fazer para mudar isso — sem compromisso.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="ty-cta-label">Quer adiantar a conversa? Fale conosco agora.</p>
+    <div class="ty-btns">
+      <a href="https://wa.me/5518996745458?text=Ol%C3%A1%21%20Acabei%20de%20preencher%20o%20formul%C3%A1rio%20e%20gostaria%20de%20conversar."
+        class="btn btn-wa" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Falar pelo WhatsApp
+      </a>
+      <a href="https://www.instagram.com/ware.juridico/"
+        class="btn btn-ig" target="_blank" rel="noopener noreferrer">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Seguir no Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- NOT FOUND -->
+  <div class="not-found" id="notFound">
+    <div class="nf-line"></div>
+    <div class="nf-title">Link inválido</div>
+    <p class="nf-desc">Este link de indicação não é válido ou o parceiro não foi encontrado. Verifique com quem te enviou.</p>
+    <a href="/" style="font-size:.8rem;color:var(--blue);margin-top:.25rem">Ir para warejuridico.com.br →</a>
+  </div>
+
+  <div class="page-footer">
+    <p>warejuridico.com.br · Dados tratados com confidencialidade</p>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+const SUPA = 'https://mxskejmnaqvmxsspvipk.supabase.co';
+const KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14c2tlam1uYXF2bXhzc3B2aXBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYzODEyODMsImV4cCI6MjA2MTk1NzI4M30.oXJpBs5FMh0h47sPvGK3GiVdDGnfk0-MVc2CWWFQ2Yo';
+
+let pid = null, pname = null;
+const slug = (new URLSearchParams(location.search).get('p') || '').toLowerCase().trim();
+
+/* ---- INIT ---- */
+async function init() {
+  if (!slug) { showNF(); return; }
+  try {
+    const r = await fetch(
+      SUPA + '/rest/v1/partners?username=eq.' + encodeURIComponent(slug) + '&select=id,name,partner_message',
+      { headers: { apikey: KEY, Authorization: 'Bearer ' + KEY } }
+    );
+    const d = await r.json();
+    if (!d || !d.length) { showNF(); return; }
+    pid   = d[0].id;
+    pname = d[0].name;
+    const b = document.getElementById('partnerBadge');
+    b.style.display = 'inline-flex';
+    document.getElementById('partnerBadgeText').textContent = 'Indicação via ' + pname;
+    if (d[0].partner_message) {
+      document.getElementById('step1Sub').innerHTML =
+        d[0].partner_message.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    }
+  } catch(e) { /* segue sem partner */ }
+}
+
+function showNF() {
+  document.getElementById('formCard').style.display = 'none';
+  document.getElementById('notFound').style.display = 'flex';
+}
+
+/* ---- MÁSCARA TEL ---- */
+document.getElementById('f-wa').addEventListener('input', function() {
+  var v = this.value.replace(/\D/g,'').slice(0,11);
+  if(v.length > 10) v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+  else if(v.length > 6) v = v.replace(/^(\d{2})(\d{4})(\d*)$/, '($1) $2-$3');
+  else if(v.length > 2) v = v.replace(/^(\d{2})(\d*)$/, '($1) $2');
+  else if(v.length) v = '(' + v;
+  this.value = v;
+});
+
+/* ---- VALIDAÇÃO BLUR ---- */
+function blurCheck(id, errId, fn) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('blur', function() {
+    var ok = fn(this.value);
+    this.classList.toggle('err', !ok);
+    this.classList.toggle('ok', ok && this.value.length > 0);
+    document.getElementById(errId).classList.toggle('show', !ok && this.value.length > 0);
+  });
+}
+blurCheck('f-name', 'e-name', v => v.trim().length >= 3);
+blurCheck('f-wa',   'e-wa',   v => v.replace(/\D/g,'').length >= 10);
+blurCheck('f-area', 'e-area', v => v.trim().length >= 2);
+blurCheck('f-city', 'e-city', v => v.trim().length >= 2);
+
+/* ---- INTERAÇÕES ---- */
+function pickRadio(el, gid, eid) {
+  document.querySelectorAll('#' + gid + ' .radio-opt').forEach(function(o){ o.classList.remove('sel'); });
+  el.classList.add('sel');
+  document.getElementById(eid).classList.remove('show');
+}
+
+function toggleCheck(el, isOutro) {
+  el.classList.toggle('sel');
+  if (isOutro) {
+    var w = document.getElementById('outroWrap');
+    w.classList.toggle('show', el.classList.contains('sel'));
+    if (!el.classList.contains('sel')) document.getElementById('outroInput').value = '';
+  }
+  if (document.querySelectorAll('#g-des .check-opt.sel').length)
+    document.getElementById('e-des').classList.remove('show');
+}
+
+function pickCard(el, gid, eid) {
+  document.querySelectorAll('#' + gid + ' .csel').forEach(function(c){ c.classList.remove('sel'); });
+  el.classList.add('sel');
+  document.getElementById(eid).classList.remove('show');
+}
+
+/* ---- VALIDAÇÕES ---- */
+function validateStep1() {
+  var ok = true;
+  function chk(id, eid, fn) {
+    var v = document.getElementById(id).value;
+    var valid = fn(v);
+    document.getElementById(id).classList.toggle('err', !valid);
+    document.getElementById(id).classList.toggle('ok', valid);
+    document.getElementById(eid).classList.toggle('show', !valid);
+    if (!valid) ok = false;
+  }
+  chk('f-name', 'e-name', function(v){ return v.trim().length >= 3; });
+  chk('f-wa',   'e-wa',   function(v){ return v.replace(/\D/g,'').length >= 10; });
+  chk('f-area', 'e-area', function(v){ return v.trim().length >= 2; });
+  chk('f-city', 'e-city', function(v){ return v.trim().length >= 2; });
+  return ok;
+}
+
+function validateStep2() {
+  var ok = true;
+  if (!document.querySelector('#g-mkt .radio-opt.sel')) {
+    document.getElementById('e-mkt').classList.add('show'); ok = false;
+  }
+  if (!document.querySelectorAll('#g-des .check-opt.sel').length) {
+    document.getElementById('e-des').classList.add('show'); ok = false;
+  }
+  if (!document.querySelector('#g-urg .csel.sel')) {
+    document.getElementById('e-urg').classList.add('show'); ok = false;
+  }
+  if (!document.querySelector('#g-est .csel.sel')) {
+    document.getElementById('e-est').classList.add('show'); ok = false;
+  }
+  return ok;
+}
+
+/* ---- NAVEGAÇÃO ---- */
+document.getElementById('btnNext').addEventListener('click', function() {
+  if (!validateStep1()) return;
+  // slide
+  document.getElementById('stepsTrack').style.transform = 'translateX(-50%)';
+  // progresso
+  document.getElementById('ps1').classList.remove('active');
+  document.getElementById('ps1').classList.add('done');
+  document.getElementById('pline').classList.add('done');
+  document.getElementById('ps2').classList.add('active');
+  document.getElementById('progFill').style.width = '100%';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.getElementById('btnBack').addEventListener('click', function() {
+  document.getElementById('stepsTrack').style.transform = 'translateX(0)';
+  document.getElementById('ps2').classList.remove('active');
+  document.getElementById('ps1').classList.remove('done');
+  document.getElementById('ps1').classList.add('active');
+  document.getElementById('pline').classList.remove('done');
+  document.getElementById('progFill').style.width = '50%';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ---- SUBMIT ---- */
+document.getElementById('btnSubmit').addEventListener('click', async function() {
+  if (!validateStep2()) return;
+  var btn = this;
+  btn.disabled = true;
+  btn.classList.add('loading');
+
+  var desafios = [];
+  document.querySelectorAll('#g-des .check-opt.sel').forEach(function(el) {
+    var txt = el.querySelector('.check-txt').textContent.trim();
+    if (txt === 'Outro') {
+      var v = document.getElementById('outroInput').value.trim();
+      if (v) desafios.push('Outro: ' + v);
+    } else {
+      desafios.push(txt);
+    }
+  });
+
+  var payload = {
+    name:           document.getElementById('f-name').value.trim(),
+    whatsapp:       document.getElementById('f-wa').value.trim(),
+    area:           document.getElementById('f-area').value.trim(),
+    city:           document.getElementById('f-city').value.trim(),
+    marketing:      document.querySelector('#g-mkt .radio-opt.sel .radio-txt').textContent.trim(),
+    desafio:        desafios.join(' | '),
+    quando:         document.querySelector('#g-urg .csel.sel').dataset.v,
+    equipe:         document.querySelector('#g-est .csel.sel').dataset.v,
+    partner_id:     pid || null,
+    status:         0,
+    date:           new Date().toISOString().split('T')[0],
+    contact_status: 0,
+    payment_status: 0,
+    notes:          document.getElementById('f-livre').value.trim() || null,
+  };
+
+  try {
+    var res = await fetch(SUPA + '/rest/v1/leads', {
+      method: 'POST',
+      headers: {
+        apikey: KEY,
+        Authorization: 'Bearer ' + KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (res.ok || res.status === 201) {
+      document.getElementById('formCard').style.display = 'none';
+      var ty = document.getElementById('thankYou');
+      ty.style.display = 'flex';
+      if (pname) document.getElementById('tySub').textContent =
+        'Recebemos suas informações via ' + pname + '. Nossa equipe vai analisar seu perfil e entrar em contato em breve.';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      throw new Error(res.status);
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    alert('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp: (18) 99674-5458');
+  }
+});
+
+init();
+</script>
+</body>
+</html>
