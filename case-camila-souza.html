@@ -39,7 +39,20 @@
 .footer-case{padding:2rem 0;border-top:1px solid var(--bd);text-align:center}
 .footer-case p{font-size:.7rem;color:var(--w30)}
 @media(max-width:768px){.metrics-grid{grid-template-columns:1fr 1fr}.nav-cta-case{display:none}}
-</style>
+
+    /* MOBILE FIXES */
+    @media(max-width:600px){
+      .metrics-grid{grid-template-columns:1fr 1fr !important}
+      .metric-n{font-size:clamp(1.4rem,8vw,2.2rem) !important}
+      .metric-card{padding:1.25rem !important}
+      .metric-l{font-size:.68rem}
+    }
+    @media(max-width:400px){
+      .metrics-grid{grid-template-columns:1fr 1fr !important}
+      .metric-n{font-size:1.3rem !important}
+    }
+
+    </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -73,7 +86,7 @@
 <!-- MÉTRICAS PRINCIPAIS -->
 <section class="sec sec-dark">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:0" class="metrics-grid anim">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:0" class="metrics-grid anim" style="overflow:hidden">
       <div class="metric-card"><div class="metric-n" style="color:#C9A84C" data-target="12" data-suffix="/mês">12</div><div class="metric-l">Leads qualificados</div></div><div class="metric-card"><div class="metric-n" style="color:#C9A84C" data-target="3" data-suffix=" meses">3</div><div class="metric-l">Para 1ª página Google</div></div><div class="metric-card"><div class="metric-n" style="color:#C9A84C" data-target="8" data-suffix=" anos">8</div><div class="metric-l">De carreira consolidada</div></div><div class="metric-card"><div class="metric-n" style="color:#C9A84C" data-target="0" data-suffix=" clientes">0</div><div class="metric-l">Pelo site em 2 anos — antes da Ware</div></div>
     </div>
   </div>

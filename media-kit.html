@@ -62,6 +62,7 @@
     .btn-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
     .btn-ig:hover{opacity:.92;transform:translateY(-2px)}
     .btn-full{width:100%}
+    .btn{overflow:hidden}
 
     /* NAV */
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 0;transition:all .35s;border-bottom:1px solid transparent}
@@ -172,9 +173,31 @@
       .case-mini-nums{gap:1rem}
       .step{gap:1rem}
     }
+  
+    @media(max-width:480px){
+      .cta-btns .btn{font-size:.78rem !important;padding:.85rem 1.25rem !important;max-width:100% !important;width:100% !important}
+      .cta-btns{gap:.65rem}
+    }
+    @media(max-width:360px){
+      .cta-btns .btn{font-size:.72rem !important;padding:.8rem 1rem !important}
+    }
+
+  
+    /* BARRA DE PROGRESSO */
+    .progress-bar{
+      position:fixed;
+      top:0;left:0;
+      width:0%;
+      height:2px;
+      background:linear-gradient(90deg,var(--blue),var(--gold));
+      z-index:200;
+      transition:width .1s linear;
+    }
+
   </style>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAV -->
@@ -459,7 +482,8 @@
             @ware.juridico
           </a>
         </div>
-        <p style="font-size:.7rem;font-weight:300;color:var(--w30);margin-top:1.75rem">warejuridico.com.br · Araçatuba, São Paulo · Brasil</p>
+        <p style="font-size:.8rem;font-weight:400;color:var(--w60);margin-top:1.5rem;letter-spacing:.02em">+55 18 99674-5458</p>
+        <p style="font-size:.7rem;font-weight:300;color:var(--w30);margin-top:.5rem">warejuridico.com.br · Araçatuba, São Paulo · Brasil</p>
       </div>
     </div>
   </div>
@@ -481,6 +505,16 @@
 
 <script>
 // Nav sticky
+
+// Barra de progresso
+const bar = document.getElementById('progressBar');
+window.addEventListener('scroll',()=>{
+  if(!bar) return;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = total > 0 ? (scrollY/total)*100 : 0;
+  bar.style.width = pct + '%';
+},{passive:true});
+
 window.addEventListener('scroll',()=>{
   document.getElementById('nav')?.classList.toggle('stuck',scrollY>60);
   document.getElementById('backTop')?.classList.toggle('visible',scrollY>400);
