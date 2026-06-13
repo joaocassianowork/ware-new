@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Ware Jurídico · Apresentação para Alexandre Piffer</title>
+<title>Ware Jurídico · Apresentação Comercial</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -358,6 +358,12 @@
     line-height:1.45;
   }
 
+  .stat .src{
+    margin-top:8px;
+    font-size:.72rem;
+    color:var(--muted2);
+  }
+
   /* ---------- Gap bars ---------- */
   .gap-block{
     margin-top: clamp(32px, 5vw, 52px);
@@ -399,8 +405,8 @@
   .gap-fill.f1{ animation: growF1 1.4s cubic-bezier(.16,1,.3,1) forwards; animation-delay:.4s; }
   .gap-fill.f2{ animation: growF2 1.4s cubic-bezier(.16,1,.3,1) forwards; animation-delay:.4s; }
 
-  @keyframes growF1{ to{ width:96%; } }
-  @keyframes growF2{ to{ width:18%; } }
+  @keyframes growF1{ to{ width:78%; } }
+  @keyframes growF2{ to{ width:60%; } }
 
   .gap-caption{
     margin-top:18px;
@@ -410,7 +416,7 @@
     padding-top:16px;
   }
 
-  /* ---------- Competitor columns ---------- */
+  /* ---------- Source cards ---------- */
   .comp-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -430,7 +436,7 @@
   .comp-card{
     border:1px solid var(--line);
     border-radius:12px;
-    padding:16px 18px;
+    padding:18px 20px;
     margin-bottom:12px;
     transition: border-color .25s;
   }
@@ -455,6 +461,12 @@
     font-size:.8rem;
     color:var(--muted);
     white-space:nowrap;
+  }
+
+  .comp-card p{
+    font-size:.88rem;
+    color:var(--muted);
+    line-height:1.55;
   }
 
   .tags{ display:flex; flex-wrap:wrap; gap:8px; }
@@ -846,8 +858,8 @@
   @media (prefers-reduced-motion: reduce){
     .slide-inner{ animation:none; opacity:1; transform:none; }
     .gap-fill{ animation:none; }
-    .gap-fill.f1{ width:96%; }
-    .gap-fill.f2{ width:18%; }
+    .gap-fill.f1{ width:78%; }
+    .gap-fill.f2{ width:60%; }
     .scroll-hint svg{ animation:none; }
   }
 </style>
@@ -901,7 +913,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3L3 7.5V12C3 17 6.75 21 12 22.5C17.25 21 21 17 21 12V7.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Quem é a Ware</h3>
-          <p>Agência de marketing dedicada exclusivamente à advocacia, parceira da ABA (Associação Brasileira dos Advogados). Trabalhamos com escritórios de Direito Previdenciário, Trabalhista e outras áreas, sempre com foco em transformar presença digital em clientes previsíveis.</p>
+          <p>Agência de marketing dedicada exclusivamente à advocacia, parceira da ABA (Associação Brasileira dos Advogados). Trabalhamos com escritórios de diversas áreas, sempre com foco em transformar presença digital em clientes previsíveis.</p>
         </div>
 
         <div class="intro-card">
@@ -958,9 +970,9 @@
   <!-- ATO 1 — CONEXÃO E CONTEXTO -->
   <section class="slide" id="s1">
     <div class="slide-inner">
-      <div class="eyebrow">Araçatuba, SP · Previdenciário &amp; Trabalhista</div>
-      <h1>Alexandre, antes de seguirmos, veja o que encontramos sobre o mercado em que você compete.</h1>
-      <p class="lead">Fizemos a mesma busca que um possível cliente faz no Google: <i>advogado previdenciário em Araçatuba</i> e <i>advogado trabalhista em Araçatuba</i>. O que aparece nessas buscas hoje é o ponto de partida desta conversa.</p>
+      <div class="eyebrow">Mercado jurídico digital · Brasil</div>
+      <h1>Antes de falar do seu escritório, veja o que os números do mercado jurídico brasileiro mostram.</h1>
+      <p class="lead">Reunimos dados de pesquisas recentes da OAB, da FGV e do Google sobre como a advocacia brasileira aparece, ou deixa de aparecer, para quem busca um profissional no Google e nas redes sociais. Esses números são o ponto de partida desta conversa.</p>
 
       <div class="scroll-hint">
         Diagnóstico do mercado
@@ -973,124 +985,75 @@
   <section class="slide" id="s2">
     <div class="slide-inner">
       <div class="eyebrow">Ato 2 · Diagnóstico</div>
-      <h2>O que o Google mostra hoje em Araçatuba</h2>
-      <p class="lead">Mapeamos os 7 escritórios que aparecem nas duas buscas. Todos têm boa reputação. Mas a forma como ocupam o digital é bem diferente do que a nota de avaliação sugere.</p>
+      <h2>O que os números do mercado jurídico brasileiro mostram</h2>
+      <p class="lead">O mercado é grande, concorrido e cada vez mais decidido no digital. Mas a forma como os escritórios ocupam esse espaço ainda está muito atrás da forma como os clientes pesquisam.</p>
 
       <div class="stats">
         <div class="stat">
-          <div class="num"><span class="accent">7</span></div>
-          <div class="label">escritórios concorrentes mapeados no Google Maps</div>
+          <div class="num"><span class="accent">1,3</span>M</div>
+          <div class="label">advogados ativos disputando espaço no Brasil</div>
+          <div class="src">OAB / FGV, Perfil ADV 2024</div>
         </div>
         <div class="stat">
-          <div class="num"><span class="accent">1</span>/7</div>
-          <div class="label">já investe em Google Ads para aparecer primeiro</div>
+          <div class="num"><span class="accent">78</span>%</div>
+          <div class="label">dos brasileiros pesquisam informação jurídica online antes de contratar um advogado</div>
+          <div class="src">Ipsos / Google, 2024</div>
         </div>
         <div class="stat">
-          <div class="num"><span class="accent">6</span>/7</div>
-          <div class="label">têm site no ar, mas a maioria não foi pensado para gerar clientes</div>
+          <div class="num"><span class="accent">65</span>%</div>
+          <div class="label">dos escritórios já usam redes sociais para prospectar clientes</div>
+          <div class="src">OAB Nacional, 2023</div>
         </div>
         <div class="stat">
-          <div class="num"><span class="accent">3</span>/7</div>
-          <div class="label">usam o Instagram como ferramenta de autoridade jurídica</div>
+          <div class="num"><span class="accent">72</span>%</div>
+          <div class="label">dos advogados atuam de forma autônoma, sem estrutura própria de marketing</div>
+          <div class="src">Perfil ADV / FGV, 2024</div>
         </div>
       </div>
 
       <div class="gap-block">
         <div class="gap-row">
-          <div class="gap-top"><span class="gname">Reputação no Google</span><span class="gval">média de 4,95 estrelas entre os 7</span></div>
+          <div class="gap-top"><span class="gname">Clientes que pesquisam um advogado online antes de contratar</span><span class="gval">78%</span></div>
           <div class="gap-track"><div class="gap-fill f1"></div></div>
         </div>
         <div class="gap-row">
-          <div class="gap-top"><span class="gname">Estrutura digital real</span><span class="gval">1 site funcional para conversão · 1 com tráfego pago ativo</span></div>
+          <div class="gap-top"><span class="gname">Sites de escritórios com segurança e conformidade LGPD adequadas, mesmo entre as maiores bancas do país</span><span class="gval">60%</span></div>
           <div class="gap-track"><div class="gap-fill f2"></div></div>
         </div>
-        <div class="gap-caption">Quanto maior essa distância entre reputação e estrutura, maior o espaço para quem chegar organizado primeiro.</div>
+        <div class="gap-caption">Se até as maiores bancas do país têm lacunas estruturais, para um escritório de porte médio esse espaço tende a ser ainda maior, e é exatamente aí que está a oportunidade.</div>
       </div>
 
       <div class="comp-grid">
-        <div>
-          <div class="comp-col-title">Previdenciário · Araçatuba</div>
-
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Menegassi Advocacia Previdenciária</span>
-              <span class="comp-rating">4,9★ (837)</span>
-            </div>
-            <div class="tags">
-              <span class="tag">Site desatualizado</span>
-              <span class="tag">Instagram pessoal, sem conteúdo jurídico</span>
-            </div>
+        <div class="comp-card">
+          <div class="comp-head">
+            <span class="comp-name">OAB / FGV · Perfil ADV</span>
+            <span class="comp-rating">2024</span>
           </div>
-
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Ana Paula Lima Advocacia</span>
-              <span class="comp-rating">5,0★ (91)</span>
-            </div>
-            <div class="tags">
-              <span class="tag">Site com estrutura fraca</span>
-              <span class="tag strong">Instagram ativo, conteúdo jurídico</span>
-            </div>
-          </div>
-
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Carla Almeida Advocacia</span>
-              <span class="comp-rating">5,0★ (100)</span>
-            </div>
-            <div class="tags">
-              <span class="tag">Site com estrutura fraca</span>
-              <span class="tag">Instagram parado</span>
-            </div>
-          </div>
+          <p>O Brasil tem 1,3 milhão de advogados ativos, e 72% atuam de forma autônoma. É o país com a maior proporção de advogados por habitante do mundo, um mercado grande e fragmentado.</p>
         </div>
 
-        <div>
-          <div class="comp-col-title">Trabalhista · Araçatuba</div>
-
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Ariel Oliveira Advogado Trabalhista</span>
-              <span class="comp-rating">5,0★ (60)</span>
-            </div>
-            <div class="tags">
-              <span class="tag ads">Google Ads ativo</span>
-              <span class="tag">Instagram amador</span>
-            </div>
+        <div class="comp-card">
+          <div class="comp-head">
+            <span class="comp-name">Ipsos / Google</span>
+            <span class="comp-rating">2024</span>
           </div>
+          <p>78% dos brasileiros buscam informação jurídica online antes de contratar um advogado. A decisão já começa no Google, antes de qualquer indicação.</p>
+        </div>
 
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Flávia Riemma Advocacia</span>
-              <span class="comp-rating">5,0★ (84)</span>
-            </div>
-            <div class="tags">
-              <span class="tag">Site bom, pouco funcional</span>
-              <span class="tag strong">Instagram bem posicionado</span>
-            </div>
+        <div class="comp-card">
+          <div class="comp-head">
+            <span class="comp-name">OAB Nacional</span>
+            <span class="comp-rating">2023</span>
           </div>
+          <p>65% dos escritórios de advocacia brasileiros já usam redes sociais ativamente para prospectar clientes. Ter perfil deixou de ser diferencial, virou ponto de partida.</p>
+        </div>
 
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Advocacia Nilson Faria</span>
-              <span class="comp-rating">4,9★ (120)</span>
-            </div>
-            <div class="tags">
-              <span class="tag">Site no ar</span>
-              <span class="tag strong">Instagram ativo, conteúdo jurídico</span>
-            </div>
+        <div class="comp-card">
+          <div class="comp-head">
+            <span class="comp-name">Análise Advocacia 500</span>
+            <span class="comp-rating">2022</span>
           </div>
-
-          <div class="comp-card">
-            <div class="comp-head">
-              <span class="comp-name">Caroline de Souza Teixeira Sociedade Individual</span>
-              <span class="comp-rating">4,9★ (219)</span>
-            </div>
-            <div class="tags">
-              <span class="tag">Sem site</span>
-              <span class="tag">Sem Instagram</span>
-            </div>
-          </div>
+          <p>Entre as 468 maiores bancas do país, 2 em cada 5 sites ainda não atendem a requisitos básicos de segurança e conformidade com a LGPD. Ter site não é o mesmo que ter estrutura.</p>
         </div>
       </div>
     </div>
@@ -1100,17 +1063,17 @@
   <section class="slide" id="s3">
     <div class="slide-inner">
       <div class="eyebrow">Ato 3 · O espelho</div>
-      <h2>Onde você está hoje, e onde pode estar</h2>
+      <h2>Onde o seu escritório está hoje, e onde pode estar</h2>
 
       <div class="pillars">
         <div class="pillar">
           <div class="ptitle"><span class="from">Invisível</span><span class="arrow">→</span><span class="to">Visível</span></div>
-          <p>Nas buscas que mapeamos, 7 nomes aparecem para quem procura advogado previdenciário ou trabalhista em Araçatuba. O seu, por enquanto, não é um deles. Os clientes que esses 7 escritórios não conseguem atender continuam buscando, e quem não aparece nessa busca não entra na disputa.</p>
+          <p>78% dos brasileiros pesquisam um advogado no Google antes de contratar. Se o seu escritório não aparece nessa busca, com site, Google Meu Negócio e redes sociais ativas, você não está apenas perdendo visibilidade. Você não está na disputa.</p>
         </div>
 
         <div class="pillar">
           <div class="ptitle"><span class="from">Imprevisível</span><span class="arrow">→</span><span class="to">Previsível</span></div>
-          <p>De 7 concorrentes, só 1 investe em tráfego pago. Isso significa que quase todo o mercado ainda depende de indicação, boca a boca e sorte de avaliação no Google. Quem constrói um canal próprio de entrada de clientes deixa de esperar o mês ser bom e passa a decidir quantos contatos quer gerar.</p>
+          <p>Mais de 1,3 milhão de advogados disputam espaço no Brasil, e a maioria ainda depende só de indicação. Quem constrói um canal próprio de captação, site, conteúdo, Google Meu Negócio e tráfego pago trabalhando juntos, deixa de esperar o mês ser bom e passa a decidir quantos contatos quer gerar.</p>
         </div>
 
         <div class="pillar">
@@ -1130,7 +1093,7 @@
       <div class="services">
         <div class="service-card">
           <h3>Site institucional</h3>
-          <p>Pensado para conversão, não só para existir. Estrutura, SEO local e linguagem que fala com quem busca advogado previdenciário e trabalhista em Araçatuba.</p>
+          <p>Pensado para conversão, não só para existir. Estrutura, SEO local e linguagem que fala com quem busca um advogado na sua área de atuação e na sua cidade.</p>
         </div>
         <div class="service-card">
           <h3>Tráfego pago (Google e Meta)</h3>
@@ -1267,7 +1230,7 @@
           <h3>Vamos estruturar isso juntos?</h3>
           <p>O próximo passo é simples: conversar sobre como aplicar isso na prática, dentro da sua rotina e do seu orçamento.</p>
         </div>
-        <a class="cta-btn" href="https://wa.me/5518996745458?text=Ol%C3%A1!%20Vi%20a%20apresenta%C3%A7%C3%A3o%20que%20a%20Ware%20preparou%20para%20mim%20e%20quero%20entender%20melhor%20a%20proposta." target="_blank" rel="noopener">
+        <a class="cta-btn" href="https://wa.me/5518996745458?text=Ol%C3%A1!%20Vi%20a%20apresenta%C3%A7%C3%A3o%20que%20a%20Ware%20preparou%20e%20quero%20entender%20melhor%20a%20proposta." target="_blank" rel="noopener">
           Falar agora no WhatsApp
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
