@@ -56,7 +56,6 @@
     position:relative;
     height:100vh; height:100dvh;
     overflow-y:auto;
-    scroll-snap-type:y mandatory;
     scroll-behavior:smooth;
     z-index:1;
   }
@@ -65,7 +64,6 @@
 
   .slide{
     min-height:100vh; min-height:100dvh;
-    scroll-snap-align:start;
     display:flex;
     align-items:center;
     padding: clamp(28px, 6vw, 96px);
@@ -81,12 +79,12 @@
     width:100%;
     opacity:0;
     transform:translateY(28px);
-    transition: opacity .8s ease, transform .8s ease;
+    animation: revealIn .8s ease forwards;
+    animation-delay:.05s;
   }
 
-  .slide.in-view .slide-inner{
-    opacity:1;
-    transform:translateY(0);
+  @keyframes revealIn{
+    to{ opacity:1; transform:translateY(0); }
   }
 
   .eyebrow{
@@ -170,6 +168,8 @@
     text-transform:uppercase;
     color:var(--white);
     z-index:5;
+    user-select:none;
+    -webkit-user-select:none;
   }
 
   .wordmark span{ color:var(--blue); }
@@ -402,8 +402,11 @@
     transition: width 1.4s cubic-bezier(.16,1,.3,1);
   }
 
-  .slide.in-view .gap-fill.f1{ width:78%; }
-  .slide.in-view .gap-fill.f2{ width:60%; }
+  .gap-fill.f1{ animation: growF1 1.4s cubic-bezier(.16,1,.3,1) forwards; animation-delay:.4s; }
+  .gap-fill.f2{ animation: growF2 1.4s cubic-bezier(.16,1,.3,1) forwards; animation-delay:.4s; }
+
+  @keyframes growF1{ to{ width:78%; } }
+  @keyframes growF2{ to{ width:60%; } }
 
   .gap-caption{
     margin-top:18px;
@@ -728,6 +731,67 @@
 
   .pricing-note b{ color:var(--white); }
 
+  /* ---------- Serviços avulsos (oculto, acesso restrito) ---------- */
+  .alt-toggle{
+    display:none;
+    margin-top: clamp(28px, 4vw, 44px);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding: clamp(20px, 3vw, 28px);
+  }
+
+  .alt-toggle.visible{ display:block; }
+
+  .alt-intro{
+    font-size:.88rem;
+    color:var(--muted);
+    margin-bottom: clamp(16px, 2.4vw, 22px);
+  }
+
+  .alt-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: clamp(14px, 2vw, 20px);
+  }
+
+  .alt-card{
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding: clamp(16px, 2.2vw, 22px);
+  }
+
+  .alt-card h4{
+    font-family:'Sora', sans-serif;
+    font-size:.95rem;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+
+  .alt-price{
+    font-family:'Sora', sans-serif;
+    font-weight:800;
+    font-size:1.15rem;
+    color:var(--blue);
+  }
+
+  .alt-price span{
+    font-family:'DM Sans', sans-serif;
+    font-weight:400;
+    font-size:.7em;
+    color:var(--muted);
+  }
+
+  .alt-price--sub{
+    font-size:.95rem;
+    margin-top:2px;
+  }
+
+  .alt-card p{
+    margin-top:8px;
+    font-size:.84rem;
+    color:var(--muted);
+  }
+
   /* ---------- CTA ---------- */
   .cta-block{
     margin-top: clamp(32px, 5vw, 52px);
@@ -768,6 +832,7 @@
     .comp-grid{ grid-template-columns:1fr; }
     .services{ grid-template-columns:1fr; }
     .pricing-grid{ grid-template-columns:1fr; }
+    .alt-grid{ grid-template-columns:1fr; }
     .intro-grid{ grid-template-columns:1fr; }
     .reality{ grid-template-columns:1fr; gap:8px; }
     .navdots{ display:none; }
@@ -780,7 +845,6 @@
     .tl-step:last-child{ padding-bottom:0; }
     .tl-step::before{ top:5px; left:0; }
 
-    .price-card.featured{ order:-1; }
   }
 
   @media (max-width: 520px){
@@ -792,8 +856,10 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .slide-inner{ transition:none; opacity:1; transform:none; }
-    .gap-fill{ transition:none; }
+    .slide-inner{ animation:none; opacity:1; transform:none; }
+    .gap-fill{ animation:none; }
+    .gap-fill.f1{ width:78%; }
+    .gap-fill.f2{ width:60%; }
     .scroll-hint svg{ animation:none; }
   }
 </style>
@@ -818,11 +884,10 @@
   <button data-target="s0" class="active"><span class="navlabel">Sobre a Ware</span></button>
   <button data-target="s1"><span class="navlabel">Conexão</span></button>
   <button data-target="s2"><span class="navlabel">Diagnóstico</span></button>
-  <button data-target="s3"><span class="navlabel">A lição</span></button>
-  <button data-target="s4"><span class="navlabel">O espelho</span></button>
+  <button data-target="s3"><span class="navlabel">O espelho</span></button>
+  <button data-target="s4"><span class="navlabel">Proposta</span></button>
   <button data-target="s5"><span class="navlabel">Como funciona</span></button>
-  <button data-target="s6"><span class="navlabel">Proposta</span></button>
-  <button data-target="s7"><span class="navlabel">Investimento</span></button>
+  <button data-target="s6"><span class="navlabel">Investimento</span></button>
 </nav>
 
 <div class="arrows">
@@ -994,44 +1059,10 @@
     </div>
   </section>
 
-  <!-- ATO 3 — A LIÇÃO -->
+  <!-- ATO 3 — O ESPELHO -->
   <section class="slide" id="s3">
     <div class="slide-inner">
-      <div class="eyebrow">Ato 3 · A lição</div>
-      <h2>3 realidades do mercado jurídico digital no Brasil</h2>
-
-      <div class="reality-list">
-        <div class="reality">
-          <div class="rnum">01</div>
-          <div>
-            <h3>Ter site não é ter presença</h3>
-            <p>Mesmo entre as maiores bancas do país, 2 em cada 5 sites de escritórios de advocacia ainda não atendem a requisitos básicos de segurança e conformidade com a LGPD. Para escritórios de porte médio, esse problema tende a ser maior, não menor. Existir no ar não é o mesmo que ser encontrado, lembrado e procurado.</p>
-          </div>
-        </div>
-
-        <div class="reality">
-          <div class="rnum">02</div>
-          <div>
-            <h3>A maioria ainda não disputa esse espaço</h3>
-            <p>Escritórios que combinam presença digital com tráfego pago bem direcionado têm registrado crescimento de até 250% na captação de clientes. Ainda assim, a maior parte dos escritórios brasileiros nunca rodou uma campanha paga. O espaço para quem sair na frente continua aberto.</p>
-          </div>
-        </div>
-
-        <div class="reality">
-          <div class="rnum">03</div>
-          <div>
-            <h3>Reputação não basta sem visibilidade</h3>
-            <p>72% dos advogados brasileiros atuam de forma autônoma, a maioria sem estrutura própria de marketing. Em um mercado de 1,3 milhão de profissionais, depender só de indicação significa competir por uma fração cada vez menor da atenção de quem já decidiu buscar um advogado primeiro no Google.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ATO 4 — O ESPELHO -->
-  <section class="slide" id="s4">
-    <div class="slide-inner">
-      <div class="eyebrow">Ato 4 · O espelho</div>
+      <div class="eyebrow">Ato 3 · O espelho</div>
       <h2>Onde o seu escritório está hoje, e onde pode estar</h2>
 
       <div class="pillars">
@@ -1050,6 +1081,35 @@
           <p>Reputação alta sem visibilidade prende você à indicação de quem já te conhece. Visibilidade com estrutura, site, conteúdo, tráfego pago e Google Meu Negócio trabalhando juntos, te coloca na frente de quem nunca ouviu falar de você, mas precisa exatamente do que você faz.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ATO 4 — PROPOSTA -->
+  <section class="slide" id="s4">
+    <div class="slide-inner">
+      <div class="eyebrow">Ato 4 · A proposta</div>
+      <h2>O que a Ware estrutura para você</h2>
+
+      <div class="services">
+        <div class="service-card">
+          <h3>Site institucional</h3>
+          <p>Pensado para conversão, não só para existir. Estrutura, SEO local e linguagem que fala com quem busca um advogado na sua área de atuação e na sua cidade.</p>
+        </div>
+        <div class="service-card">
+          <h3>Tráfego pago (Google e Meta)</h3>
+          <p>Presença paga dentro das normas da OAB, para você aparecer enquanto sua autoridade orgânica está sendo construída.</p>
+        </div>
+        <div class="service-card">
+          <h3>Gestão de redes sociais</h3>
+          <p>Conteúdo jurídico estratégico, como o que já funciona para outros nomes desse mercado, mas com a sua marca e o seu posicionamento.</p>
+        </div>
+        <div class="service-card">
+          <h3>Google Meu Negócio</h3>
+          <p>Perfil otimizado para aparecer e converter exatamente na busca que mapeamos nesta apresentação.</p>
+        </div>
+      </div>
+
+      <p class="diff-line">Tudo isso com <b>painel de controle de leads</b>, scripts por etapa de atendimento, relatórios mensais, atualizações jurídicas e consultoria estratégica contínua.</p>
     </div>
   </section>
 
@@ -1087,37 +1147,8 @@
     </div>
   </section>
 
-  <!-- ATO 5 — PROPOSTA -->
-  <section class="slide" id="s6">
-    <div class="slide-inner">
-      <div class="eyebrow">Ato 5 · A proposta</div>
-      <h2>O que a Ware estrutura para você</h2>
-
-      <div class="services">
-        <div class="service-card">
-          <h3>Site institucional</h3>
-          <p>Pensado para conversão, não só para existir. Estrutura, SEO local e linguagem que fala com quem busca um advogado na sua área de atuação e na sua cidade.</p>
-        </div>
-        <div class="service-card">
-          <h3>Tráfego pago (Google e Meta)</h3>
-          <p>Presença paga dentro das normas da OAB, para você aparecer enquanto sua autoridade orgânica está sendo construída.</p>
-        </div>
-        <div class="service-card">
-          <h3>Gestão de redes sociais</h3>
-          <p>Conteúdo jurídico estratégico, como o que já funciona para outros nomes desse mercado, mas com a sua marca e o seu posicionamento.</p>
-        </div>
-        <div class="service-card">
-          <h3>Google Meu Negócio</h3>
-          <p>Perfil otimizado para aparecer e converter exatamente na busca que mapeamos nesta apresentação.</p>
-        </div>
-      </div>
-
-      <p class="diff-line">Tudo isso com <b>painel de controle de leads</b>, scripts por etapa de atendimento, relatórios mensais, atualizações jurídicas e consultoria estratégica contínua.</p>
-    </div>
-  </section>
-
   <!-- INVESTIMENTO + CTA -->
-  <section class="slide" id="s7">
+  <section class="slide" id="s6">
     <div class="slide-inner">
       <div class="eyebrow">Investimento</div>
       <h2>Planos pensados para o seu momento</h2>
@@ -1170,6 +1201,30 @@
 
       <p class="pricing-note">Esse valor mensal contempla, nas redes sociais, a gestão completa e criação de posts; no site, posts no blog, backup, atualização e hospedagem; no tráfego pago, o acompanhamento de performance das campanhas; e no Google Meu Negócio, o acompanhamento contínuo e a atualização do perfil. <b>Valores de referência para esta proposta inicial</b>, o escopo final é ajustado na consultoria estratégica.</p>
 
+      <p class="pricing-note"><b>Sobre o contrato:</b> trabalhamos com vigência mínima de 6 meses. É o tempo necessário para que site, conteúdo, tráfego pago e Google Meu Negócio comecem a trabalhar juntos e gerar resultado consistente.</p>
+
+      <div class="alt-toggle" id="altPlan">
+        <p class="alt-intro">Também trabalhamos esses serviços de forma isolada, caso prefira começar por uma frente específica:</p>
+        <div class="alt-grid">
+            <div class="alt-card">
+              <h4>Site institucional</h4>
+              <div class="alt-price">R$ 2.500 <span>pagamento único</span></div>
+              <div class="alt-price alt-price--sub">+ R$ 200<span>/mês</span></div>
+              <p>Manutenção e hospedagem.</p>
+            </div>
+            <div class="alt-card">
+              <h4>Gestão de redes sociais</h4>
+              <div class="alt-price">R$ 1.500<span>/mês</span></div>
+              <p>12 posts e 15 stories por mês.</p>
+            </div>
+            <div class="alt-card">
+              <h4>Google Meu Negócio</h4>
+              <div class="alt-price">R$ 500 <span>pagamento único</span></div>
+              <p>Criação e otimização do perfil.</p>
+            </div>
+          </div>
+      </div>
+
       <div class="cta-block">
         <div class="cta-text">
           <h3>Vamos estruturar isso juntos?</h3>
@@ -1197,14 +1252,6 @@
   let currentIndex = 0;
   actTotal.textContent = String(slides.length).padStart(2, '0');
 
-  // reveal on view
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('in-view');
-    });
-  }, { threshold: 0.35 });
-  slides.forEach(s => revealObserver.observe(s));
-
   // active dot + indicator
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1218,7 +1265,7 @@
         nextBtn.disabled = idx === slides.length - 1;
       }
     });
-  }, { threshold: 0.6 });
+  }, { threshold: 0.3 });
   slides.forEach(s => navObserver.observe(s));
 
   dots.forEach((dot, i) => {
@@ -1238,6 +1285,21 @@
   window.addEventListener('keydown', (e) => {
     if (['ArrowDown','PageDown',' '].includes(e.key)) { e.preventDefault(); goTo(currentIndex + 1); }
     if (['ArrowUp','PageUp'].includes(e.key)) { e.preventDefault(); goTo(currentIndex - 1); }
+  });
+
+  // toque triplo no logo revela o bloco de serviços avulsos
+  const wordmark = document.querySelector('.wordmark');
+  const altPlan = document.getElementById('altPlan');
+  let tapCount = 0;
+  let tapTimer = null;
+  wordmark.addEventListener('click', () => {
+    tapCount++;
+    clearTimeout(tapTimer);
+    tapTimer = setTimeout(() => { tapCount = 0; }, 800);
+    if (tapCount >= 3) {
+      altPlan.classList.toggle('visible');
+      tapCount = 0;
+    }
   });
 </script>
 
