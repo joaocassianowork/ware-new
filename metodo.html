@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,6 +12,11 @@
   <meta property="og:description" content="Como a Ware estrutura a presença digital de escritórios de advocacia. Processo completo dos primeiros 90 dias."/>
   <meta property="og:url" content="https://warejuridico.com.br/metodo"/>
   <meta property="og:image" content="https://warejuridico.com.br/assets/og-home.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@warejuridico"/>
+  <meta name="twitter:title" content="Nosso Método | Ware Jurídico"/>
+  <meta name="twitter:description" content="Como a Ware estrutura a presença digital de escritórios de advocacia. Processo completo dos primeiros 90 dias."/>
+  <meta name="twitter:image" content="https://warejuridico.com.br/assets/og-home.jpg"/>
   <script>
   window.dataLayer=window.dataLayer||[];
   window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
@@ -23,6 +28,7 @@
     f.parentNode.insertBefore(j,f);
   });
 </script>
+    <link rel="stylesheet" href="/assets/ware.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap" as="style" onload="this.rel='stylesheet'"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -31,7 +37,7 @@
     :root{--black:#080808;--black-2:#0e0e0e;--black-3:#141414;--blue:#4F7EFF;--blue-dim:rgba(79,126,255,.1);--blue-border:rgba(79,126,255,.22);--white:#f5f2ee;--w60:rgba(245,242,238,.6);--w30:rgba(245,242,238,.3);--bd:rgba(255,255,255,.07);--fs:'Sora',sans-serif;--fb:'DM Sans',sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
-    body{font-family:var(--fb);background:var(--black);color:var(--white);overflow-x:hidden;cursor:none}
+    body{font-family:var(--fb);background:var(--black);color:var(--white);overflow-x:hidden;}
     a{text-decoration:none;color:inherit}
     ::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px}
     #cur{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;mix-blend-mode:difference}
@@ -41,7 +47,7 @@
     .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem)}
     .ew{font-family:var(--fb);font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:.5rem}
     .ew::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);flex-shrink:0}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.85rem;font-weight:600;padding:.95rem 2rem;border-radius:100px;border:none;cursor:none;white-space:nowrap;transition:transform .3s,opacity .2s;letter-spacing:.02em}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.85rem;font-weight:600;padding:.95rem 2rem;border-radius:100px;border:none;cursor:pointer;white-space:nowrap;transition:transform .3s,opacity .2s;letter-spacing:.02em}
     .btn svg{flex-shrink:0;transition:transform .3s}
     .btn:hover svg{transform:translate(3px,-3px)}
     .btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 32px rgba(79,126,255,.2)}.btn-blue:hover{opacity:.88;transform:translateY(-2px)}
@@ -57,15 +63,15 @@
     .nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
     .nav-links a{font-size:.72rem;font-weight:400;color:var(--w30);letter-spacing:.04em;transition:color .2s}
     .nav-links a:hover{color:var(--white)}
-    .nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.72rem;font-weight:500;padding:.65rem 1.4rem;border-radius:100px;background:var(--blue);color:#fff;transition:opacity .2s;cursor:none}
+    .nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.72rem;font-weight:500;padding:.65rem 1.4rem;border-radius:100px;background:var(--blue);color:#fff;transition:opacity .2s;cursor:pointer}
     .nav-cta:hover{opacity:.88}
-    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:4px}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
     .nav-toggle span{display:block;width:20px;height:1px;background:var(--w60);border-radius:1px;transition:.3s}
     .nav-mob{position:fixed;inset:0;background:var(--black);z-index:99;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.25rem;padding:0 clamp(2rem,8vw,6rem);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
     .nav-mob.open{opacity:1;visibility:visible}
     .nav-mob a{font-family:var(--fs);font-size:clamp(2.2rem,7vw,5rem);font-weight:800;color:var(--w30);line-height:1.2;transition:color .2s;letter-spacing:-.02em}
     .nav-mob a:hover{color:var(--white)}
-    .nav-mob-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--w30);font-size:.9rem;cursor:none;font-family:var(--fb)}
+    .nav-mob-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--w30);font-size:.9rem;cursor:pointer;font-family:var(--fb)}
     /* HERO */
     .hero{padding:clamp(9rem,14vw,12rem) 0 clamp(4rem,7vw,6rem);background:var(--black);border-bottom:1px solid var(--bd);position:relative;overflow:hidden;text-align:center}
     .hero-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;opacity:.03;pointer-events:none}
@@ -92,7 +98,7 @@
     .fase-list{display:flex;flex-direction:column;gap:2px;margin-top:3rem}
     .fase{background:var(--black-2);border:1px solid var(--bd);border-radius:16px;overflow:hidden;transition:border-color .3s}
     .fase:hover{border-color:var(--blue-border)}
-    .fase-header{display:flex;align-items:center;gap:1.5rem;padding:2rem 2.25rem;cursor:none;transition:background .25s}
+    .fase-header{display:flex;align-items:center;gap:1.5rem;padding:2rem 2.25rem;cursor:pointer;transition:background .25s}
     .fase-header:hover{background:var(--black-3)}
     .fase-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--blue-border);background:var(--blue-dim);padding:4px 14px;border-radius:100px;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(79,126,255,.9);white-space:nowrap;flex-shrink:0}
     .fase-title{font-family:var(--fs);font-size:1.15rem;font-weight:700;color:var(--white);letter-spacing:-.01em;flex:1}
@@ -132,13 +138,27 @@
     .ft-col a:hover{color:var(--white)}
     .ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem}
     .ft-copy{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.18)}
-    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s;cursor:none}
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s;cursor:pointer}
     .wa-float:hover{transform:translateY(-3px) scale(1.05)}
-    .back-top{position:fixed;bottom:96px;right:28px;z-index:999;width:40px;height:40px;border-radius:50%;background:rgba(14,14,14,.9);border:1px solid rgba(255,255,255,.1);color:var(--w60);display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;opacity:0;pointer-events:none;backdrop-filter:blur(10px)}
+    .back-top{position:fixed;bottom:96px;right:28px;z-index:999;width:40px;height:40px;border-radius:50%;background:rgba(14,14,14,.9);border:1px solid rgba(255,255,255,.1);color:var(--w60);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;opacity:0;pointer-events:none;backdrop-filter:blur(10px)}
     .back-top.visible{opacity:1;pointer-events:all}
     @media(max-width:1024px){.fil-grid{grid-template-columns:1fr}.dif-grid{grid-template-columns:1fr 1fr}.fase-body{grid-template-columns:1fr}}
     @media(max-width:768px){body{cursor:auto}#cur{display:none}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.dif-grid{grid-template-columns:1fr}.wa-float,.back-top{cursor:auto}}
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://warejuridico.com.br/metodo#webpage",
+  "url": "https://warejuridico.com.br/metodo",
+  "name": "Nosso Método | Como a Ware Jurídico Trabalha",
+  "description": "Conheça o método da Ware Jurídico. Como estruturamos a presença digital de escritórios de advocacia nos primeiros 30, 60 e 90 dias de parceria.",
+  "isPartOf": {"@id": "https://warejuridico.com.br/#website"},
+  "publisher": {"@id": "https://warejuridico.com.br/#organization"},
+  "dateModified": "2026-06-21",
+  "inLanguage": "pt-BR"
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
