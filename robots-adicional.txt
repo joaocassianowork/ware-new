@@ -1,0 +1,27 @@
+# Regras Gerais e Segurança
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://warejuridico.com.br/sitemap-paginas-locais.xml
+Sitemap: https://warejuridico.com.br/sitemap.xml
+
+# Permissões para IA (LLMs)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
