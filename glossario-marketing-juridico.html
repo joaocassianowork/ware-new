@@ -28,11 +28,14 @@
     f.parentNode.insertBefore(j,f);
   });
 </script>
-    <link rel="stylesheet" href="/assets/ware.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <style>
+  <link rel="preload" href="/assets/ware.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/ware.css"></noscript>
+<link rel="preload" href="/assets/fonts/sora-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <style id="ware-fonts">
+@font-face{font-family:'Sora';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/sora-300.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/sora-400.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/sora-600.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/sora-700.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/sora-800.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/dmsans-300.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/dmsans-400.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/dmsans-500.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/dmsans-600.woff2') format('woff2')}
+  </style>
+<style>
   
     :root{--black:#080808;--black-2:#0e0e0e;--black-3:#141414;--black-4:#1a1a1a;--blue:#4F7EFF;--blue-dim:rgba(79,126,255,.12);--blue-border:rgba(79,126,255,.22);--white:#f5f2ee;--w60:rgba(245,242,238,.6);--w30:rgba(245,242,238,.3);--w12:rgba(245,242,238,.12);--w06:rgba(245,242,238,.06);--bd:rgba(255,255,255,.07);--fs:'Sora',sans-serif;--fb:'DM Sans',sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -185,13 +188,13 @@
     <div class="wrap" id="glossarioContent">
       <div class="gl-section" id="gl-A"><div class="gl-letter">A</div><div class="gl-grid"><div class="gl-term" id="termo-autoridade-de-dom-nio">
   <div class="gl-term-name">Autoridade de domínio</div>
-  <div class="gl-term-def">Métrica que indica o quão relevante e confiável um site é para os mecanismos de busca. Quanto maior a autoridade, melhor o ranqueamento orgânico. Constrói-se com tempo, conteúdo de qualidade e <a href='/guia-marketing-juridico.html'>backlinks de sites relevantes</a>.</div>
+  <div class="gl-term-def">Métrica que indica o quão relevante e confiável um site é para os mecanismos de busca. Quanto maior a autoridade, melhor o ranqueamento orgânico. Constrói-se com tempo, conteúdo de qualidade e <a href='/guia-marketing-juridico'>backlinks de sites relevantes</a>.</div>
 </div></div></div><div class="gl-section" id="gl-B"><div class="gl-letter">B</div><div class="gl-grid"><div class="gl-term" id="termo-backlink">
   <div class="gl-term-name">Backlink</div>
   <div class="gl-term-def">Link de outro site que aponta para o seu. É um dos fatores mais importantes de SEO — cada backlink de qualidade funciona como um voto de confiança para o Google. Para advogados, backlinks de portais como JusBrasil, Conjur e Migalhas têm alto valor.</div>
 </div><div class="gl-term" id="termo-blog-jur-dico">
   <div class="gl-term-name">Blog jurídico</div>
-  <div class="gl-term-def">Seção do site com artigos informativos sobre temas do direito. Dentro das normas do <a href='/blog/provimento-205-2021-oab-marketing-juridico.html'>Provimento 205/2021 da OAB</a>, é uma das ferramentas mais eficazes — constrói autoridade e gera tráfego orgânico continuamente.</div>
+  <div class="gl-term-def">Seção do site com artigos informativos sobre temas do direito. Dentro das normas do <a href='/blog/provimento-205-2021-oab-marketing-juridico'>Provimento 205/2021 da OAB</a>, é uma das ferramentas mais eficazes — constrói autoridade e gera tráfego orgânico continuamente.</div>
 </div><div class="gl-term" id="termo-bounce-rate">
   <div class="gl-term-name">Bounce rate</div>
   <div class="gl-term-def">Taxa de rejeição. Percentual de visitantes que entram no site e saem sem interagir com outra página. Taxa alta pode indicar conteúdo irrelevante, carregamento lento ou experiência mobile ruim.</div>
@@ -233,10 +236,10 @@
   <div class="gl-term-def">Estratégia de otimização para aparecer nas respostas de inteligências artificiais como ChatGPT, Perplexity e Google AI Overview. Envolve conteúdo aprofundado, autoridade de domínio e dados estruturados. Cada vez mais relevante para 2025 e além.</div>
 </div><div class="gl-term" id="termo-google-ads">
   <div class="gl-term-name">Google Ads</div>
-  <div class="gl-term-def">Plataforma de anúncios pagos do Google. Permite aparecer no topo das buscas imediatamente. Permitido pela OAB desde que os anúncios sejam informativos e sem promessas de resultado. Veja o <a href='/blog/google-ads-para-advogados.html'>guia completo de Google Ads para advogados</a>.</div>
+  <div class="gl-term-def">Plataforma de anúncios pagos do Google. Permite aparecer no topo das buscas imediatamente. Permitido pela OAB desde que os anúncios sejam informativos e sem promessas de resultado. Veja o <a href='/blog/google-ads-para-advogados'>guia completo de Google Ads para advogados</a>.</div>
 </div><div class="gl-term" id="termo-google-meu-neg-cio--gmb">
   <div class="gl-term-name">Google Meu Negócio (GMB)</div>
-  <div class="gl-term-def">Perfil gratuito no Google Maps e nas buscas locais. Quando alguém busca advogado + especialidade + cidade, os três primeiros resultados do Maps recebem a maioria dos cliques. É a ação de maior retorno imediato para advogados. Veja <a href='/blog/google-meu-negocio-para-advogados.html'>como otimizar seu GMB</a>.</div>
+  <div class="gl-term-def">Perfil gratuito no Google Maps e nas buscas locais. Quando alguém busca advogado + especialidade + cidade, os três primeiros resultados do Maps recebem a maioria dos cliques. É a ação de maior retorno imediato para advogados. Veja <a href='/blog/google-meu-negocio-para-advogados'>como otimizar seu GMB</a>.</div>
 </div><div class="gl-term" id="termo-google-search-console">
   <div class="gl-term-name">Google Search Console</div>
   <div class="gl-term-def">Ferramenta gratuita do Google que mostra como o site aparece nas buscas — quais termos geram cliques, quais páginas estão indexadas, erros de rastreamento e Core Web Vitals. Essencial para monitorar o SEO.</div>
@@ -281,7 +284,7 @@
   <div class="gl-term-def">Visitas geradas pelos resultados naturais do Google, sem anúncios pagos. O tráfego orgânico cresce com o SEO e não cessa quando o orçamento para. É o investimento de maior retorno a longo prazo para escritórios de advocacia.</div>
 </div></div></div><div class="gl-section" id="gl-P"><div class="gl-letter">P</div><div class="gl-grid"><div class="gl-term" id="termo-provimento-205-2021">
   <div class="gl-term-name">Provimento 205/2021</div>
-  <div class="gl-term-def">Normativa do Conselho Federal da OAB que regulamenta o marketing jurídico no Brasil. Permite publicidade informativa, redes sociais, Google Ads e produção de conteúdo. Veda promessas de resultado, comparações depreciadoras e captação ativa. Leia o <a href='/blog/provimento-205-2021-oab-marketing-juridico.html'>guia completo sobre o Provimento 205/2021</a>.</div>
+  <div class="gl-term-def">Normativa do Conselho Federal da OAB que regulamenta o marketing jurídico no Brasil. Permite publicidade informativa, redes sociais, Google Ads e produção de conteúdo. Veda promessas de resultado, comparações depreciadoras e captação ativa. Leia o <a href='/blog/provimento-205-2021-oab-marketing-juridico'>guia completo sobre o Provimento 205/2021</a>.</div>
 </div><div class="gl-term" id="termo-publicidade-passiva">
   <div class="gl-term-name">Publicidade passiva</div>
   <div class="gl-term-def">Presença digital que atrai o cliente organicamente — site, perfis em redes sociais, Google Meu Negócio, artigos. Sempre foi permitida pela OAB e é a base do marketing jurídico ético.</div>
@@ -296,7 +299,7 @@
   <div class="gl-term-def">Código estruturado no HTML que ajuda o Google a entender o conteúdo com precisão. Pode gerar rich snippets nos resultados — FAQs expansíveis, avaliações, breadcrumbs. Para advogados, os schemas mais importantes são LocalBusiness, FAQPage e BreadcrumbList.</div>
 </div><div class="gl-term" id="termo-seo--search-engine-optimization">
   <div class="gl-term-name">SEO (Search Engine Optimization)</div>
-  <div class="gl-term-def">Otimização para mecanismos de busca. Conjunto de técnicas que fazem o site aparecer nas primeiras posições do Google organicamente. Para advogados, o SEO local — focado em cidade e especialidade — é o mais estratégico. Veja o <a href='/blog/seo-para-advogados.html'>guia de SEO para advogados</a>.</div>
+  <div class="gl-term-def">Otimização para mecanismos de busca. Conjunto de técnicas que fazem o site aparecer nas primeiras posições do Google organicamente. Para advogados, o SEO local — focado em cidade e especialidade — é o mais estratégico. Veja o <a href='/blog/seo-para-advogados'>guia de SEO para advogados</a>.</div>
 </div><div class="gl-term" id="termo-seo-local">
   <div class="gl-term-name">SEO local</div>
   <div class="gl-term-def">Estratégia focada em aparecer para buscas com localização geográfica. Para advogados, é fundamental: advogado trabalhista em São Paulo tem intenção de contratação muito maior do que advogado trabalhista genérico.</div>

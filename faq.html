@@ -27,11 +27,12 @@
     f.parentNode.insertBefore(j,f);
   });
 </script>
-    <link rel="stylesheet" href="/assets/ware.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <style>
+<link rel="preload" href="/assets/fonts/sora-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <style id="ware-fonts">
+@font-face{font-family:'Sora';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/sora-300.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/sora-400.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/sora-600.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/sora-700.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/sora-800.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/dmsans-300.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/dmsans-400.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/dmsans-500.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/dmsans-600.woff2') format('woff2')}
+  </style>
+<style>
     :root{
       --black:#080808;--black-2:#0e0e0e;--black-3:#141414;
       --blue:#4F7EFF;--blue-dim:rgba(79,126,255,.1);--blue-border:rgba(79,126,255,.22);
@@ -255,15 +256,15 @@
   <h2 class="faq-section-title">Marketing Jurídico — Conceitos e Normas</h2>
   <details class="faq-item">
   <summary class="faq-q">O que é marketing jurídico?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Marketing jurídico é o conjunto de estratégias digitais que tornam um escritório de advocacia visível para potenciais clientes — no Google, no Maps e nas redes sociais. Não é publicidade agressiva: é presença digital estruturada para que clientes que já estão pesquisando te encontrem antes da concorrência. A <a href='/sobre.html'><strong>Ware Jurídico</strong></a> é uma agência 100% dedicada a isso.</p></div>
+  <div class="faq-body-text"><p>Marketing jurídico é o conjunto de estratégias digitais que tornam um escritório de advocacia visível para potenciais clientes — no Google, no Maps e nas redes sociais. Não é publicidade agressiva: é presença digital estruturada para que clientes que já estão pesquisando te encontrem antes da concorrência. A <a href='/sobre'><strong>Ware Jurídico</strong></a> é uma agência 100% dedicada a isso.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Advogados podem fazer marketing no Brasil?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Sim. O <a href='/blog/provimento-205-2021-oab-marketing-juridico.html'>Provimento 205/2021 do Conselho Federal da OAB</a> permite publicidade informativa para advogados — site profissional, Google Ads, SEO, Instagram, LinkedIn e Google Meu Negócio. O que é proibido: promessas de resultado, captação mercantil ativa, comparações depreciadoras e linguagem sensacionalista.</p></div>
+  <div class="faq-body-text"><p>Sim. O <a href='/blog/provimento-205-2021-oab-marketing-juridico'>Provimento 205/2021 do Conselho Federal da OAB</a> permite publicidade informativa para advogados — site profissional, Google Ads, SEO, Instagram, LinkedIn e Google Meu Negócio. O que é proibido: promessas de resultado, captação mercantil ativa, comparações depreciadoras e linguagem sensacionalista.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">O que diz o Provimento 205/2021 da OAB sobre marketing?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>É a normativa que regulamentou o <strong>marketing jurídico no Brasil</strong>. Permite publicidade informativa, produção de conteúdo e anúncios pagos. Veda promessas de resultado, captação ativa, comparações com outros advogados e comunicação que mercantilize a profissão. A Ware Jurídico desenvolve todas as estratégias dentro dessas normas — nenhum risco para a sua imagem ou inscrição na OAB. Leia o <a href='/blog/provimento-205-2021-oab-marketing-juridico.html'>guia completo sobre o Provimento 205/2021</a>.</p></div>
+  <div class="faq-body-text"><p>É a normativa que regulamentou o <strong>marketing jurídico no Brasil</strong>. Permite publicidade informativa, produção de conteúdo e anúncios pagos. Veda promessas de resultado, captação ativa, comparações com outros advogados e comunicação que mercantilize a profissão. A Ware Jurídico desenvolve todas as estratégias dentro dessas normas — nenhum risco para a sua imagem ou inscrição na OAB. Leia o <a href='/blog/provimento-205-2021-oab-marketing-juridico'>guia completo sobre o Provimento 205/2021</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Qual a diferença entre marketing jurídico e captação de clientela?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -271,22 +272,22 @@
 </details>
   <details class="faq-item">
   <summary class="faq-q">Marketing jurídico funciona para advogados autônomos ou só para grandes escritórios?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Funciona especialmente bem para advogados autônomos e escritórios pequenos. Em cidades do interior, onde a concorrência digital é baixa, um advogado individual pode aparecer na primeira página do Google em poucos meses. A <a href='/diagnostico.html'><strong>Ware Jurídico</strong> oferece diagnóstico gratuito</a> e apresenta um plano realista para o seu momento atual — sem compromisso.</p></div>
+  <div class="faq-body-text"><p>Funciona especialmente bem para advogados autônomos e escritórios pequenos. Em cidades do interior, onde a concorrência digital é baixa, um advogado individual pode aparecer na primeira página do Google em poucos meses. A <a href='/diagnostico'><strong>Ware Jurídico</strong> oferece diagnóstico gratuito</a> e apresenta um plano realista para o seu momento atual — sem compromisso.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Qual canal de marketing tem maior retorno para advogados?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Depende do objetivo. <strong>Google Meu Negócio</strong> tem a maior taxa de conversão imediata — quem clica no Maps já decidiu contratar. <strong>SEO</strong> tem o maior retorno a longo prazo. <strong>Google Ads</strong> gera contatos mais rápidos. <strong>LinkedIn</strong> é indispensável para o mercado empresarial. O <a href='/guia-marketing-juridico.html'>Guia Completo de Marketing Jurídico da Ware</a> explica cada canal em profundidade.</p></div>
+  <div class="faq-body-text"><p>Depende do objetivo. <strong>Google Meu Negócio</strong> tem a maior taxa de conversão imediata — quem clica no Maps já decidiu contratar. <strong>SEO</strong> tem o maior retorno a longo prazo. <strong>Google Ads</strong> gera contatos mais rápidos. <strong>LinkedIn</strong> é indispensável para o mercado empresarial. O <a href='/guia-marketing-juridico'>Guia Completo de Marketing Jurídico da Ware</a> explica cada canal em profundidade.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Por onde um advogado deve começar no marketing digital?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>A sequência recomendada pela <strong>Ware Jurídico</strong>: (1) Google Meu Negócio — resultado mais rápido e custo zero; (2) Site profissional — base para todas as outras estratégias; (3) SEO — crescimento de longo prazo; (4) Google Ads — acelera os resultados enquanto o SEO matura; (5) Redes sociais — constrói autoridade ao longo do tempo. <a href='/diagnostico.html'>Solicite um diagnóstico gratuito</a> para saber qual é o ponto de partida ideal para o seu escritório.</p></div>
+  <div class="faq-body-text"><p>A sequência recomendada pela <strong>Ware Jurídico</strong>: (1) Google Meu Negócio — resultado mais rápido e custo zero; (2) Site profissional — base para todas as outras estratégias; (3) SEO — crescimento de longo prazo; (4) Google Ads — acelera os resultados enquanto o SEO matura; (5) Redes sociais — constrói autoridade ao longo do tempo. <a href='/diagnostico'>Solicite um diagnóstico gratuito</a> para saber qual é o ponto de partida ideal para o seu escritório.</p></div>
 </details>
 </div>
 <div class="faq-section" id="cat-seo">
   <h2 class="faq-section-title">SEO para Advogados</h2>
   <details class="faq-item">
   <summary class="faq-q">O que é SEO jurídico?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>SEO jurídico é a otimização do site de um advogado para aparecer nas primeiras posições do Google organicamente — sem pagar por cliques. Envolve palavras-chave locais como <em>advogado trabalhista São Paulo</em>, estrutura técnica do site, conteúdo relevante e construção de autoridade. Veja o <a href='/blog/seo-para-advogados.html'>guia completo de SEO para advogados</a> que a Ware Jurídico publicou.</p></div>
+  <div class="faq-body-text"><p>SEO jurídico é a otimização do site de um advogado para aparecer nas primeiras posições do Google organicamente — sem pagar por cliques. Envolve palavras-chave locais como <em>advogado trabalhista São Paulo</em>, estrutura técnica do site, conteúdo relevante e construção de autoridade. Veja o <a href='/blog/seo-para-advogados'>guia completo de SEO para advogados</a> que a Ware Jurídico publicou.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Quanto tempo leva para o SEO gerar resultados para um advogado?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -302,7 +303,7 @@
 </details>
   <details class="faq-item">
   <summary class="faq-q">Blog jurídico ajuda no SEO?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Muito. Cada artigo é uma nova porta de entrada para o site. Artigos que respondem perguntas específicas — <em>quanto tempo tenho para entrar com ação trabalhista</em> — aparecem nas buscas informacionais e atraem potenciais clientes no início da jornada. O Google favorece sites que publicam conteúdo relevante regularmente. Confira os <a href='/blog.html'>artigos do blog da Ware Jurídico</a> como referência de conteúdo bem estruturado.</p></div>
+  <div class="faq-body-text"><p>Muito. Cada artigo é uma nova porta de entrada para o site. Artigos que respondem perguntas específicas — <em>quanto tempo tenho para entrar com ação trabalhista</em> — aparecem nas buscas informacionais e atraem potenciais clientes no início da jornada. O Google favorece sites que publicam conteúdo relevante regularmente. Confira os <a href='/blog'>artigos do blog da Ware Jurídico</a> como referência de conteúdo bem estruturado.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">O que são Core Web Vitals e como afetam o ranking de advogados?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -317,7 +318,7 @@
   <h2 class="faq-section-title">Google Meu Negócio para Advogados</h2>
   <details class="faq-item">
   <summary class="faq-q">Como otimizar o Google Meu Negócio de um escritório de advocacia?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Complete 100% do perfil: categoria principal <em>Escritório de Advocacia</em>, categorias secundárias por especialidade, descrição com palavras-chave locais, fotos profissionais, horário atualizado, link do site e telefone direto. Publique uma atualização por semana e responda todas as avaliações. Veja o <a href='/blog/google-meu-negocio-para-advogados.html'>guia completo de Google Meu Negócio para advogados</a>.</p></div>
+  <div class="faq-body-text"><p>Complete 100% do perfil: categoria principal <em>Escritório de Advocacia</em>, categorias secundárias por especialidade, descrição com palavras-chave locais, fotos profissionais, horário atualizado, link do site e telefone direto. Publique uma atualização por semana e responda todas as avaliações. Veja o <a href='/blog/google-meu-negocio-para-advogados'>guia completo de Google Meu Negócio para advogados</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Avaliações no Google realmente impactam o ranqueamento de advogados?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -329,7 +330,7 @@
 </details>
   <details class="faq-item">
   <summary class="faq-q">Meu escritório aparece no Maps mas em posição baixa. O que fazer?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Verifique se o perfil está 100% completo, se as categorias estão corretas e se há fotos atualizadas. Adicione a descrição com palavras-chave da especialidade e cidade. Crie publicações semanais. Solicite avaliações a clientes satisfeitos. O Google leva 4 a 8 semanas para refletir as melhorias. A <strong>Ware Jurídico</strong> faz a <a href='/diagnostico.html'>otimização completa do Google Meu Negócio</a> como parte dos seus planos.</p></div>
+  <div class="faq-body-text"><p>Verifique se o perfil está 100% completo, se as categorias estão corretas e se há fotos atualizadas. Adicione a descrição com palavras-chave da especialidade e cidade. Crie publicações semanais. Solicite avaliações a clientes satisfeitos. O Google leva 4 a 8 semanas para refletir as melhorias. A <strong>Ware Jurídico</strong> faz a <a href='/diagnostico'>otimização completa do Google Meu Negócio</a> como parte dos seus planos.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Advogado pode pedir avaliações para clientes?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -340,7 +341,7 @@
   <h2 class="faq-section-title">Google Ads para Advogados</h2>
   <details class="faq-item">
   <summary class="faq-q">Google Ads vale a pena para advogados?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Sim, especialmente para nichos com alta intenção de busca. Quem pesquisa <em>advogado demissão ilícita</em> ou <em>advogado plano de saúde negou cobertura</em> já tomou a decisão de contratar — está apenas escolhendo o advogado. A <strong>Ware Jurídico</strong> cria e gerencia <a href='/blog/google-ads-para-advogados.html'>campanhas de Google Ads para advogados</a> dentro das normas da OAB.</p></div>
+  <div class="faq-body-text"><p>Sim, especialmente para nichos com alta intenção de busca. Quem pesquisa <em>advogado demissão ilícita</em> ou <em>advogado plano de saúde negou cobertura</em> já tomou a decisão de contratar — está apenas escolhendo o advogado. A <strong>Ware Jurídico</strong> cria e gerencia <a href='/blog/google-ads-para-advogados'>campanhas de Google Ads para advogados</a> dentro das normas da OAB.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Quanto custa o Google Ads para advogados?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -367,11 +368,11 @@
   <h2 class="faq-section-title">Redes Sociais para Advogados</h2>
   <details class="faq-item">
   <summary class="faq-q">Advogados podem usar Instagram para atrair clientes?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Sim, dentro das normas da OAB. O Instagram é um canal de construção de autoridade — não de captação direta. Conteúdo informativo sobre direito, desmistificação de processos e bastidores do escritório atraem seguidores qualificados que eventualmente tornam-se clientes. Veja o <a href='/blog/instagram-para-advogados.html'>guia de Instagram para advogados</a> da Ware Jurídico.</p></div>
+  <div class="faq-body-text"><p>Sim, dentro das normas da OAB. O Instagram é um canal de construção de autoridade — não de captação direta. Conteúdo informativo sobre direito, desmistificação de processos e bastidores do escritório atraem seguidores qualificados que eventualmente tornam-se clientes. Veja o <a href='/blog/instagram-para-advogados'>guia de Instagram para advogados</a> da Ware Jurídico.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Instagram ou LinkedIn: qual é mais importante para advogados?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Depende do perfil de cliente. <strong>Instagram</strong> é melhor para advogados que atendem pessoas físicas — família, trabalhista, criminal. <strong>LinkedIn</strong> é essencial para advogados que atendem empresas — empresarial, tributário, trabalhista para empregadores. Leia o <a href='/blog/linkedin-para-advogados.html'>guia de LinkedIn para advogados</a> da Ware Jurídico.</p></div>
+  <div class="faq-body-text"><p>Depende do perfil de cliente. <strong>Instagram</strong> é melhor para advogados que atendem pessoas físicas — família, trabalhista, criminal. <strong>LinkedIn</strong> é essencial para advogados que atendem empresas — empresarial, tributário, trabalhista para empregadores. Leia o <a href='/blog/linkedin-para-advogados'>guia de LinkedIn para advogados</a> da Ware Jurídico.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Com que frequência um advogado deve postar nas redes sociais?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -390,7 +391,7 @@
   <h2 class="faq-section-title">Custos e Resultados</h2>
   <details class="faq-item">
   <summary class="faq-q">Quanto custa uma agência de marketing jurídico?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Os planos da <strong>Ware Jurídico</strong> começam a partir de R$ 2.000 por mês com gestão completa da presença digital — SEO, Google Ads, Google Meu Negócio, relatórios mensais e consultoria. Antes de qualquer proposta, fazemos um <a href='/diagnostico.html'>diagnóstico gratuito</a> para recomendar apenas o que faz sentido para o seu momento. Saiba mais em <a href='/blog/quanto-custa-agencia-marketing-juridico.html'>quanto custa uma agência de marketing jurídico</a>.</p></div>
+  <div class="faq-body-text"><p>Os planos da <strong>Ware Jurídico</strong> começam a partir de R$ 2.000 por mês com gestão completa da presença digital — SEO, Google Ads, Google Meu Negócio, relatórios mensais e consultoria. Antes de qualquer proposta, fazemos um <a href='/diagnostico'>diagnóstico gratuito</a> para recomendar apenas o que faz sentido para o seu momento. Saiba mais em <a href='/blog/quanto-custa-agencia-marketing-juridico'>quanto custa uma agência de marketing jurídico</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Como calcular o retorno do investimento em marketing jurídico?<span class="faq-arrow" aria-hidden="true"></span></summary>
@@ -410,38 +411,38 @@
 </details>
   <details class="faq-item">
   <summary class="faq-q">Marketing jurídico funciona em qualquer cidade do Brasil?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Funciona em todo o Brasil. Cidades menores têm menor concorrência digital — resultados mais rápidos e custo por clique menor. Capitais têm mais volume mas também mais concorrência. A <strong>Ware Jurídico</strong> tem clientes em mais de 10 estados e calibra a estratégia para cada mercado. <a href='/diagnostico.html'>Solicite um diagnóstico gratuito</a> para ver o potencial da sua cidade.</p></div>
+  <div class="faq-body-text"><p>Funciona em todo o Brasil. Cidades menores têm menor concorrência digital — resultados mais rápidos e custo por clique menor. Capitais têm mais volume mas também mais concorrência. A <strong>Ware Jurídico</strong> tem clientes em mais de 10 estados e calibra a estratégia para cada mercado. <a href='/diagnostico'>Solicite um diagnóstico gratuito</a> para ver o potencial da sua cidade.</p></div>
 </details>
 </div>
 <div class="faq-section" id="cat-especialidade">
   <h2 class="faq-section-title">Perguntas por Especialidade</h2>
   <details class="faq-item">
   <summary class="faq-q">Como captar clientes para advocacia trabalhista?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>SEO local para <em>advogado trabalhista + cidade</em>, Google Ads para termos como <em>advogado demissão sem justa causa</em> e Google Meu Negócio otimizado. Trabalhadores recém-demitidos pesquisam advogado imediatamente — presença digital garante que te encontrem nesse momento de alta intenção. Veja a página de <a href='/marketing-para-advogados-trabalhista.html'>marketing para advogados trabalhistas</a> da Ware Jurídico.</p></div>
+  <div class="faq-body-text"><p>SEO local para <em>advogado trabalhista + cidade</em>, Google Ads para termos como <em>advogado demissão sem justa causa</em> e Google Meu Negócio otimizado. Trabalhadores recém-demitidos pesquisam advogado imediatamente — presença digital garante que te encontrem nesse momento de alta intenção. Veja a página de <a href='/marketing-para-advogados-trabalhista'>marketing para advogados trabalhistas</a> da Ware Jurídico.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Como captar clientes para advocacia de família?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>SEO para <em>advogado divórcio + cidade</em>, Google Meu Negócio com avaliações e conteúdo que transmite confiança e empatia. O cliente de família está fragilizado e escolhe com base na confiança — avaliações positivas são decisivas. Veja a página de <a href='/marketing-para-advogados-familia.html'>marketing para advogados de família</a>.</p></div>
+  <div class="faq-body-text"><p>SEO para <em>advogado divórcio + cidade</em>, Google Meu Negócio com avaliações e conteúdo que transmite confiança e empatia. O cliente de família está fragilizado e escolhe com base na confiança — avaliações positivas são decisivas. Veja a página de <a href='/marketing-para-advogados-familia'>marketing para advogados de família</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Como captar clientes para advocacia previdenciária?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>SEO para <em>advogado previdenciário + cidade</em> e Google Ads com segmentação adequada. Conteúdo educativo sobre aposentadorias atrai o público certo com antecedência. A <strong>Ware Jurídico</strong> tem estratégias específicas para o nicho previdenciário. Veja a página de <a href='/marketing-para-advogados-previdenciario.html'>marketing para advogados previdenciários</a>.</p></div>
+  <div class="faq-body-text"><p>SEO para <em>advogado previdenciário + cidade</em> e Google Ads com segmentação adequada. Conteúdo educativo sobre aposentadorias atrai o público certo com antecedência. A <strong>Ware Jurídico</strong> tem estratégias específicas para o nicho previdenciário. Veja a página de <a href='/marketing-para-advogados-previdenciario'>marketing para advogados previdenciários</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Como captar clientes para advocacia criminal?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Google Ads é essencial — o cliente de direito criminal busca com urgência e não tem tempo para pesquisar muito. Google Meu Negócio com informações claras e SEO para <em>advogado criminal + cidade</em>. Velocidade de resposta é fator decisivo neste nicho. Veja a página de <a href='/marketing-para-advogados-criminal.html'>marketing para advogados criminalistas</a>.</p></div>
+  <div class="faq-body-text"><p>Google Ads é essencial — o cliente de direito criminal busca com urgência e não tem tempo para pesquisar muito. Google Meu Negócio com informações claras e SEO para <em>advogado criminal + cidade</em>. Velocidade de resposta é fator decisivo neste nicho. Veja a página de <a href='/marketing-para-advogados-criminal'>marketing para advogados criminalistas</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Como captar empresas como clientes para advocacia empresarial?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>LinkedIn com conteúdo de autoridade sobre contratos e compliance, SEO para <em>advogado empresarial + cidade</em> e Google Ads para PMEs. Gestores tomam decisões pelo LinkedIn antes de pesquisar no Google — presença ativa na plataforma é indispensável. Veja a página de <a href='/marketing-para-advogados-empresarial.html'>marketing para advogados empresariais</a>.</p></div>
+  <div class="faq-body-text"><p>LinkedIn com conteúdo de autoridade sobre contratos e compliance, SEO para <em>advogado empresarial + cidade</em> e Google Ads para PMEs. Gestores tomam decisões pelo LinkedIn antes de pesquisar no Google — presença ativa na plataforma é indispensável. Veja a página de <a href='/marketing-para-advogados-empresarial'>marketing para advogados empresariais</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Marketing jurídico funciona para advogado tributário?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>Funciona muito bem, especialmente com LinkedIn para o mercado corporativo e SEO para termos como <em>advogado tributário + cidade</em>. Pequenas e médias empresas buscam ativamente assessoria tributária — e um advogado com presença digital profissional capta esse mercado que antes ia para grandes bancas. Veja a página de <a href='/marketing-para-advogados-tributario.html'>marketing para advogados tributaristas</a>.</p></div>
+  <div class="faq-body-text"><p>Funciona muito bem, especialmente com LinkedIn para o mercado corporativo e SEO para termos como <em>advogado tributário + cidade</em>. Pequenas e médias empresas buscam ativamente assessoria tributária — e um advogado com presença digital profissional capta esse mercado que antes ia para grandes bancas. Veja a página de <a href='/marketing-para-advogados-tributario'>marketing para advogados tributaristas</a>.</p></div>
 </details>
   <details class="faq-item">
   <summary class="faq-q">Como captar clientes para advocacia do consumidor?<span class="faq-arrow" aria-hidden="true"></span></summary>
-  <div class="faq-body-text"><p>SEO para termos como <em>advogado plano de saúde recusou</em> e <em>advogado banco cobrou indevido</em>, mais Google Ads. Este nicho tem alto volume de buscas informacionais — artigos que respondem dúvidas comuns atraem tráfego qualificado diretamente. Veja a página de <a href='/marketing-para-advogados-consumidor.html'>marketing para advogados do consumidor</a>.</p></div>
+  <div class="faq-body-text"><p>SEO para termos como <em>advogado plano de saúde recusou</em> e <em>advogado banco cobrou indevido</em>, mais Google Ads. Este nicho tem alto volume de buscas informacionais — artigos que respondem dúvidas comuns atraem tráfego qualificado diretamente. Veja a página de <a href='/marketing-para-advogados-consumidor'>marketing para advogados do consumidor</a>.</p></div>
 </details>
 </div>
 

@@ -28,12 +28,12 @@
     f.parentNode.insertBefore(j,f);
   });
 </script>
-    <link rel="stylesheet" href="/assets/ware.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap" as="style" onload="this.rel='stylesheet'"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
+<link rel="preload" href="/assets/fonts/sora-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <style id="ware-fonts">
+@font-face{font-family:'Sora';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/sora-300.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/sora-400.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/sora-600.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/sora-700.woff2') format('woff2')}@font-face{font-family:'Sora';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/sora-800.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/dmsans-300.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/dmsans-400.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/dmsans-500.woff2') format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/dmsans-600.woff2') format('woff2')}
+  </style>
+<style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{-webkit-font-smoothing:antialiased;font-size:16px}
     body{font-family:'DM Sans',sans-serif;background:#080808;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:3rem 1.25rem 4rem;position:relative;overflow-x:hidden}
