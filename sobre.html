@@ -231,6 +231,7 @@
     .ft-col a:hover{color:var(--white)}
     .ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem}
     .ft-copy{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.18)}
+    .ft-social{display:flex;align-items:center;gap:.75rem;margin-top:1rem}.ft-social a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;color:#fff;transition:transform .25s,opacity .2s}.ft-social a:hover{transform:translateY(-2px);opacity:.88}.ft-social-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}.ft-social-li{background:#0A66C2}.ft-social-g{background:#4285F4}
     .ft-policy{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.22);transition:color .2s}
     .ft-policy:hover{color:var(--w60)}
     .ft-cities{font-size:.6rem;font-weight:300;color:rgba(255,255,255,.13);margin-top:.5rem;line-height:1.6}
@@ -276,6 +277,7 @@
 
     /* ── RESPONSIVE ── */
     @media(max-width:768px){body{cursor:auto}#cur{display:none}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.ft-top{flex-direction:column}.ft-nav{gap:2rem}.wa-float{bottom:20px;right:20px;width:50px;height:50px;cursor:auto}.back-top{bottom:82px;right:20px;cursor:auto}.stats-grid{grid-template-columns:1fr}}
+    @media(max-width:480px){.ph-h1,.hero-h1{font-size:clamp(1.75rem,6.5vw,2.6rem)!important}.page-hero{padding-top:clamp(6rem,12vw,9rem)}.hero-btns{flex-direction:column;align-items:stretch}.hero-btns .btn{width:100%;justify-content:center}}
     @media(max-width:1024px){.fil-grid,.fund-grid{grid-template-columns:1fr}.val-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.val-grid{grid-template-columns:1fr}}
     input,select,textarea,button[type="submit"]{cursor:auto!important}
@@ -421,7 +423,7 @@
   <div class="ft-top">
     <div>
       <div class="logo"><div><span class="logo-wmark" style="color:rgba(245,242,238,.35)">WARE</span><span class="logo-sub">Marketing Jurídico</span></div><div class="logo-dot"></div></div>
-      <p class="ft-tagline">Agência de marketing 100% focada no mercado jurídico.</p>
+      <p class="ft-tagline">Agência de marketing 100% focada no mercado jurídico.</p><div class="ft-social"><a class="ft-social-ig" href="https://www.instagram.com/ware.juridico/" target="_blank" rel="noopener" aria-label="Instagram da Ware Juridico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a class="ft-social-li" href="https://www.linkedin.com/company/ware-juridico" target="_blank" rel="noopener" aria-label="LinkedIn da Ware Juridico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a class="ft-social-g" href="https://share.google/kHOMnBrX6GfzIlKmT" target="_blank" rel="noopener" aria-label="Google Meu Negocio da Ware Juridico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 0 1-6.032-6.032 6.033 6.033 0 0 1 6.032-6.032c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0 0 12.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z"/></svg></a></div>
       <p class="ft-cities">Agência de marketing jurídico em SP · RJ · MG · PR · DF · RS · BA · PE · GO · SC e todo o Brasil</p>
     </div>
     <nav class="ft-nav">
@@ -610,4 +612,9 @@ gsap.to('.sb-cta-wm',{
 </script>
 </body>
 </html>
+
+
+
+
+
 
