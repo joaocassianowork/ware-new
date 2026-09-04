@@ -104,12 +104,31 @@
     ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"/>
+  <link rel="apple-touch-icon" href="/assets/favicon-32.png"/>
   <link rel="preconnect" href="https://static.cloudflareinsights.com"/>
   <link rel="dns-prefetch" href="https://static.cloudflareinsights.com"/>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/></noscript>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  window.addEventListener('load',function(){
+    var f=document.getElementsByTagName('script')[0],j=document.createElement('script');
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-N6PHGW3L';
+    f.parentNode.insertBefore(j,f);
+  });
+  </script>
+  <link rel="preload" href="/assets/fonts/sora-800.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="/assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin/>
+  <style id="ware-fonts">
+@font-face{font-family:'Sora';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/sora-300.woff2') format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/sora-400.woff2') format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/sora-700.woff2') format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/sora-800.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/dmsans-300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/dmsans-400.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/dmsans-500.woff2') format('woff2')}
+  </style>
   <style>
     :root{
       --ink:#080808;--ink2:#090c12;--panel:#0d1017;
@@ -481,6 +500,7 @@
   </style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PHGW3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:var(--blue);color:#fff;padding:.5rem 1rem;border-radius:0 0 8px 0;font-family:var(--fs);font-size:.8rem;font-weight:700;transition:left .2s" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Ir para o conteúdo</a>
 <div id="prog"></div>
