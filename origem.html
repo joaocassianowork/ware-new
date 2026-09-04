@@ -7,12 +7,12 @@
   <meta name="description" content="Programa da Ware Jurídico para advogados com até 5 anos de OAB. Site profissional gratuito + Google Meu Negócio por R$150/mês durante 12 meses. Entrega em 21 dias, dentro das normas da OAB."/>
   <meta name="keywords" content="site para advogado grátis, site advocacia gratuito, jovem advogado, marketing jurídico, Ware Jurídico, Ware Origem, primeiro escritório advocacia, Google Meu Negócio advogado"/>
   <meta name="author" content="Ware Jurídico"/>
-  <link rel="canonical" href="https://warejuridico.com.br/ware-origem.html"/>
+  <link rel="canonical" href="https://warejuridico.com.br/origem"/>
   <!-- Open Graph -->
   <meta property="og:title" content="Ware Origem — Site Gratuito para Jovens Advogados"/>
   <meta property="og:description" content="Programa da Ware Jurídico: site profissional gratuito e Google Meu Negócio para advogados com até 5 anos de OAB. R$150/mês por 12 meses."/>
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://warejuridico.com.br/ware-origem.html"/>
+  <meta property="og:url" content="https://warejuridico.com.br/origem"/>
   <meta property="og:locale" content="pt_BR"/>
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
@@ -25,8 +25,8 @@
     "@graph":[
       {
         "@type":"WebPage",
-        "@id":"https://warejuridico.com.br/ware-origem.html",
-        "url":"https://warejuridico.com.br/ware-origem.html",
+        "@id":"https://warejuridico.com.br/origem",
+        "url":"https://warejuridico.com.br/origem",
         "name":"Ware Origem — Site Gratuito para Jovens Advogados",
         "description":"Programa da Ware Jurídico para advogados com até 5 anos de OAB. Site profissional gratuito e Google Meu Negócio por R$150/mês durante 12 meses.",
         "inLanguage":"pt-BR",
@@ -35,7 +35,7 @@
           "@type":"BreadcrumbList",
           "itemListElement":[
             {"@type":"ListItem","position":1,"name":"Ware Jurídico","item":"https://warejuridico.com.br"},
-            {"@type":"ListItem","position":2,"name":"Ware Origem","item":"https://warejuridico.com.br/ware-origem.html"}
+            {"@type":"ListItem","position":2,"name":"Ware Origem","item":"https://warejuridico.com.br/origem"}
           ]
         }
       },
@@ -51,7 +51,7 @@
       },
       {
         "@type":"Service",
-        "@id":"https://warejuridico.com.br/ware-origem.html#service",
+        "@id":"https://warejuridico.com.br/origem#service",
         "name":"Ware Origem",
         "description":"Programa que oferece site profissional gratuito e Google Meu Negócio para advogados com até 5 anos de inscrição na OAB, com mensalidade de R$150 durante 12 meses.",
         "provider":{"@id":"https://warejuridico.com.br/#organization"},
@@ -993,34 +993,45 @@ document.getElementById('whatsapp')?.addEventListener('input',function(){
   this.value=v;
 });
 
-// FORM SUPABASE
-const SURL='https://mxskejmnaqvmxsspvipk.supabase.co/rest/v1/leads';
-const SKEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14c2tlam1uYXF2bXhzc3B2aXBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MzgwMTEsImV4cCI6MjA5MzUxNDAxMX0.DvIupwMbl4b0X_6MvpfL2eQgKOuxEGNGe4zhqwNP0Ng';
+// FORM — Formspree
+const FURL='https://formspree.io/f/xkjnnyrn';
+
 document.getElementById('causaForm')?.addEventListener('submit',async function(e){
   e.preventDefault();
   const btn=document.getElementById('btnSubmit');
+
+  // Validar elegibilidade
   const d=new Date(document.getElementById('oab_data').value),lim=new Date();
   lim.setFullYear(lim.getFullYear()-5);
   if(d<lim){alert('Sua inscrição na OAB é anterior a 5 anos. O Ware Origem é exclusivo para advogados com até 5 anos de OAB.');return;}
+
   btn.disabled=true;btn.textContent='Enviando...';
+
+  const nome=document.getElementById('nome').value;
+  const whatsapp=document.getElementById('whatsapp').value;
+  const email=document.getElementById('email').value;
+  const cidade=document.getElementById('cidade').value;
+  const especialidade=document.getElementById('especialidade').value;
+  const oab=`${document.getElementById('oab_numero').value}-${document.getElementById('oab_estado').value}`;
+  const oab_data=document.getElementById('oab_data').value;
+
   try{
-    const res=await fetch(SURL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json','apikey':SKEY,'Authorization':'Bearer '+SKEY,'Prefer':'return=minimal'},
-      body:JSON.stringify({
-        nome:document.getElementById('nome').value,
-        whatsapp:document.getElementById('whatsapp').value,
-        email:document.getElementById('email').value,
-        cidade:document.getElementById('cidade').value,
-        especialidade:document.getElementById('especialidade').value,
-        notes:`Ware Origem | OAB: ${document.getElementById('oab_numero').value}-${document.getElementById('oab_estado').value} | Inscrição: ${document.getElementById('oab_data').value}`,
-        quando:'Ware Origem',source:'ware-origem'
-      })
-    });
-    if(res.ok||res.status===201){
-      document.getElementById('causaForm').style.display='none';
-      document.getElementById('formOk').style.display='block';
-    }else throw 0;
+    // 1. Formspree → e-mail
+    const fData=new FormData();
+    fData.append('Nome',nome);
+    fData.append('WhatsApp',whatsapp);
+    fData.append('Email',email);
+    fData.append('Cidade',cidade);
+    fData.append('Especialidade',especialidade);
+    fData.append('OAB',oab);
+    fData.append('Data de inscrição OAB',oab_data);
+    fData.append('Programa','Ware Origem');
+    await fetch(FURL,{method:'POST',body:fData,headers:{Accept:'application/json'}});
+
+    // Sucesso
+    document.getElementById('causaForm').style.display='none';
+    document.getElementById('formOk').style.display='block';
+
   }catch{
     alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
     btn.disabled=false;btn.textContent='Enviar inscrição';
