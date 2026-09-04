@@ -106,7 +106,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/></noscript>
   <style>
     :root{
       --ink:#080808;--ink2:#090c12;--panel:#0d1017;
@@ -115,6 +116,7 @@
       --w20:rgba(245,242,238,.2);--w10:rgba(245,242,238,.1);
       --seam:rgba(245,242,238,.07);
       --fs:'Sora',sans-serif;--fb:'DM Sans',sans-serif;
+  font-display:swap;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -133,7 +135,7 @@
     .lw{font-family:var(--fs);font-size:.95rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--w)}
     .lw b{color:var(--blue)}
     .ld{width:5px;height:5px;border-radius:50%;background:var(--blue);margin-bottom:.12rem}
-    .ls{font-size:.42rem;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--w20);display:block;margin-top:.12rem}
+    .ls{font-size:.42rem;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--w40);display:block;margin-top:.12rem}
     .nav-right{display:flex;align-items:center;gap:1.75rem}
     .nav-links{display:flex;gap:1.75rem}
     .nav-links a{font-size:.78rem;color:var(--w40);transition:color .2s}
@@ -364,7 +366,7 @@
     .form-card h3{font-family:var(--fs);font-size:1.05rem;font-weight:700;color:var(--w);margin-bottom:1.75rem;letter-spacing:-.02em}
     .fg2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:.85rem}
     .fg1{margin-bottom:.85rem}
-    .field label{display:block;font-family:var(--fs);font-size:.58rem;font-weight:700;letter-spacing:.1em;color:var(--w20);margin-bottom:.38rem}
+    .field label{display:block;font-family:var(--fs);font-size:.58rem;font-weight:700;letter-spacing:.1em;color:var(--w60);margin-bottom:.38rem}
     .field input,.field select{
       width:100%;background:rgba(245,242,238,.03);border:1.5px solid var(--seam);
       border-radius:10px;padding:.78rem 1rem;font-family:var(--fb);
@@ -374,7 +376,7 @@
     .field input::placeholder{color:var(--w20)}
     .field select option{background:var(--ink);color:var(--w)}
     .field input:focus,.field select:focus{border-color:var(--blue);background:rgba(79,126,255,.04)}
-    .field-hint{font-size:.68rem;color:var(--w20);margin-top:.32rem;line-height:1.5}
+    .field-hint{font-size:.68rem;color:var(--w40);margin-top:.32rem;line-height:1.5}
     .fdiv{height:1px;background:var(--seam);margin:1.25rem 0}
     .btn-sub{
       width:100%;font-family:var(--fs);font-size:.88rem;font-weight:700;
@@ -385,7 +387,7 @@
     }
     .btn-sub:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(79,126,255,.34)}
     .btn-sub:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
-    .form-legal{font-size:.68rem;color:var(--w20);line-height:1.6;margin-top:.75rem;text-align:center}
+    .form-legal{font-size:.68rem;color:var(--w40);line-height:1.6;margin-top:.75rem;text-align:center}
     .form-ok{display:none;text-align:center;padding:3rem 1.5rem}
     .form-ok svg{color:var(--blue);margin:0 auto 1rem}
     .form-ok h3{font-family:var(--fs);font-size:1.1rem;font-weight:700;color:var(--w);margin-bottom:.45rem}
@@ -477,6 +479,7 @@
 </head>
 <body>
 
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:var(--blue);color:#fff;padding:.5rem 1rem;border-radius:0 0 8px 0;font-family:var(--fs);font-size:.8rem;font-weight:700;transition:left .2s" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Ir para o conteúdo</a>
 <div id="prog"></div>
 
 <!-- NAV -->
@@ -500,6 +503,7 @@
   </div>
 </nav>
 
+<main id="main-content">
 <!-- HERO -->
 <section class="hero">
   <canvas class="hero-canvas" id="heroCanvas"></canvas>
@@ -788,23 +792,23 @@
         <h3>Inscrição Ware Origem</h3>
         <form id="causaForm" novalidate>
           <div class="fg2">
-            <div class="field"><label>Nome completo</label><input type="text" id="nome" placeholder="Seu nome" required/></div>
-            <div class="field"><label>WhatsApp</label><input type="tel" id="whatsapp" placeholder="(11) 99999-9999" required/></div>
+            <div class="field"><label for="nome">Nome completo</label><input type="text" id="nome" placeholder="Seu nome" required/></div>
+            <div class="field"><label for="whatsapp">WhatsApp</label><input type="tel" id="whatsapp" placeholder="(11) 99999-9999" required/></div>
           </div>
           <div class="fg1">
-            <div class="field"><label>E-mail</label><input type="email" id="email" placeholder="seu@email.com" required/></div>
+            <div class="field"><label for="email">E-mail</label><input type="email" id="email" placeholder="seu@email.com" required/></div>
           </div>
           <div class="fg2">
-            <div class="field"><label>Cidade</label><input type="text" id="cidade" placeholder="Sua cidade" required/></div>
-            <div class="field"><label>Especialidade</label><input type="text" id="especialidade" placeholder="Ex: Trabalhista" list="espec-list"/><datalist id="espec-list"><option>Trabalhista</option><option>Família</option><option>Criminal</option><option>Previdenciário</option><option>Empresarial</option><option>Tributário</option><option>Consumidor</option><option>Imobiliário</option><option>Civil</option></datalist></div>
+            <div class="field"><label for="cidade">Cidade</label><input type="text" id="cidade" placeholder="Sua cidade" required/></div>
+            <div class="field"><label for="especialidade">Especialidade</label><input type="text" id="especialidade" placeholder="Ex: Trabalhista" list="espec-list"/><datalist id="espec-list"><option>Trabalhista</option><option>Família</option><option>Criminal</option><option>Previdenciário</option><option>Empresarial</option><option>Tributário</option><option>Consumidor</option><option>Imobiliário</option><option>Civil</option></datalist></div>
           </div>
           <div class="fdiv"></div>
           <div class="fg2">
-            <div class="field"><label>Número OAB</label><input type="text" id="oab_numero" placeholder="Ex: 123456" required/><span class="field-hint">Apenas números</span></div>
-            <div class="field"><label>Estado OAB</label><select id="oab_estado" required><option value="">Estado</option><option>AC</option><option>AL</option><option>AM</option><option>AP</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MG</option><option>MS</option><option>MT</option><option>PA</option><option>PB</option><option>PE</option><option>PI</option><option>PR</option><option>RJ</option><option>RN</option><option>RO</option><option>RR</option><option>RS</option><option>SC</option><option>SE</option><option>SP</option><option>TO</option></select></div>
+            <div class="field"><label for="oab_numero">Número OAB</label><input type="text" id="oab_numero" placeholder="Ex: 123456" required/><span class="field-hint">Apenas números</span></div>
+            <div class="field"><label for="oab_estado">Estado OAB</label><select id="oab_estado" required><option value="">Estado</option><option>AC</option><option>AL</option><option>AM</option><option>AP</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MG</option><option>MS</option><option>MT</option><option>PA</option><option>PB</option><option>PE</option><option>PI</option><option>PR</option><option>RJ</option><option>RN</option><option>RO</option><option>RR</option><option>RS</option><option>SC</option><option>SE</option><option>SP</option><option>TO</option></select></div>
           </div>
           <div class="fg1" style="margin-top:.85rem">
-            <div class="field"><label>Data de inscrição na OAB</label><input type="date" id="oab_data" required/><span class="field-hint">Precisa ser de até 5 anos atrás</span></div>
+            <div class="field"><label for="oab_data">Data de inscrição na OAB</label><input type="date" id="oab_data" required/><span class="field-hint">Precisa ser de até 5 anos atrás</span></div>
           </div>
           <button type="submit" class="btn-sub" id="btnSubmit">Enviar inscrição</button>
           <p class="form-legal">Seus dados são usados exclusivamente para análise de elegibilidade e contato da Ware Jurídico.</p>
@@ -866,6 +870,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="ft">
     <div class="ft-brand">
@@ -893,8 +898,8 @@ window.addEventListener('scroll',()=>{
   document.getElementById('nav')?.classList.toggle('stuck',scrollY>60);
 },{passive:true});
 
-// HERO CANVAS — partículas sutis conectadas
-(function(){
+// HERO CANVAS — diferido para não bloquear FCP
+function initCanvas(){(function(){
   const c=document.getElementById('heroCanvas');
   if(!c)return;
   const ctx=c.getContext('2d');
@@ -942,7 +947,8 @@ window.addEventListener('scroll',()=>{
     requestAnimationFrame(draw);
   }
   draw();
-})();
+})();}
+if('requestIdleCallback' in window){requestIdleCallback(initCanvas,{timeout:1500})}else{setTimeout(initCanvas,300)}
 
 // HERO REVEAL
 window.addEventListener('load',()=>{
