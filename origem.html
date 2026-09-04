@@ -106,6 +106,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://static.cloudflareinsights.com"/>
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com"/>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,700;0,800;1,800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/></noscript>
   <style>
@@ -115,7 +117,8 @@
       --w:#f5f2ee;--w70:rgba(245,242,238,.7);--w40:rgba(245,242,238,.4);
       --w20:rgba(245,242,238,.2);--w10:rgba(245,242,238,.1);
       --seam:rgba(245,242,238,.07);
-      --fs:'Sora',sans-serif;--fb:'DM Sans',sans-serif;
+      --fs:'Sora',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --fb:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-display:swap;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -156,7 +159,7 @@
       background:radial-gradient(ellipse 85% 65% at 55% 35%,rgba(79,126,255,.13) 0%,transparent 60%),
                  linear-gradient(155deg,#0a0e1a 0%,#080d16 35%,var(--ink) 65%);
     }
-    .hero-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;width:100%;height:100%;opacity:.38}
+    .hero-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;width:100%;height:100%;opacity:.38;contain:strict}
 
     .hero-inner{position:relative;z-index:1;max-width:780px}
 
@@ -186,7 +189,7 @@
       margin-bottom:1.75rem;
     }
     .rl{display:block;overflow:hidden}
-    .ri{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+    .ri{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.16,1,.3,1);will-change:transform}
     .ri.in{transform:translateY(0)}
     .rl:nth-child(2) .ri{transition-delay:.1s}
     .rl:nth-child(3) .ri{transition-delay:.2s}
@@ -905,14 +908,14 @@ function initCanvas(){(function(){
   const ctx=c.getContext('2d');
   let W,H,pts=[];
   function resize(){
-    W=c.width=c.offsetWidth||window.innerWidth;
-    H=c.height=c.offsetHeight||window.innerHeight;
-    c.style.width="100%";
-    c.style.height="100%";
+    const rect=c.parentElement?.getBoundingClientRect();
+    W=c.width=rect?rect.width:window.innerWidth;
+    H=c.height=rect?rect.height:window.innerHeight;
   }
   resize();
   window.addEventListener('resize',resize,{passive:true});
-  for(let i=0;i<55;i++){
+  const ptCount=window.innerWidth<640?28:55;
+  for(let i=0;i<ptCount;i++){
     pts.push({
       x:Math.random()*W,y:Math.random()*H,
       vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,
