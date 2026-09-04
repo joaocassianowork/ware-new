@@ -139,9 +139,9 @@
     .hero-inner{position:relative;z-index:2;max-width:780px}
     .hero-badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--blue-border);background:var(--blue-dim);padding:4px 14px;border-radius:100px;font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(79,126,255,.9);margin-bottom:1.75rem;opacity:0}
     .hero-badge::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue)}
-    .hero-h1{font-family:var(--fs);font-size:clamp(2.8rem,6vw,5.5rem);font-weight:800;line-height:1.06;letter-spacing:-.04em;color:var(--white);margin-bottom:1.25rem;opacity:0}
+    .hero-h1{font-family:var(--fs);font-size:clamp(2.8rem,6vw,5.5rem);font-weight:800;line-height:1.06;letter-spacing:-.04em;color:var(--white);margin-bottom:1.25rem;transform:translateY(18px)}
     .hero-h1 .acc{color:var(--blue)}
-    .word-cycle{display:inline-block;overflow:hidden;vertical-align:bottom;line-height:inherit}
+    .word-cycle{display:inline-block;overflow:hidden;vertical-align:bottom;line-height:inherit;min-width:11ch}
     .word-cycle .acc{display:inline-block}
     @keyframes wcIn{from{transform:translateY(105%);opacity:0}to{transform:translateY(0);opacity:1}}
     @keyframes wcOut{from{transform:translateY(0);opacity:1}to{transform:translateY(-105%);opacity:0}}
