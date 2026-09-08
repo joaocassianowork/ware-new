@@ -631,20 +631,111 @@
   }
 
   @media (max-width: 600px) {
-    .page { padding: 40px 24px 60px; }
-    .cover h1 { font-size: 30px; }
-    .cover-meta { grid-template-columns: 1fr 1fr; }
+    /* ── Layout base ── */
+    .page { padding: 28px 16px 52px; }
+
+    /* ── Capa ── */
+    .cover { padding-bottom: 32px; margin-bottom: 32px; }
+    .cover-top { margin-bottom: 28px; gap: 8px; }
+    .cover h1 { font-size: 26px; }
+    .cover-sub { font-size: 13px; margin-bottom: 24px; }
+    .cover-meta { grid-template-columns: 1fr; }
+    .cover-meta-cell { padding: 12px 14px; }
+
+    /* ── Seções ── */
+    .section { margin-bottom: 36px; }
+    .section-head { margin-bottom: 18px; }
+    .sec-title { font-size: 19px; }
+    .body-text { font-size: 13.5px; max-width: 100%; }
+
+    /* ── Note box ── */
+    .note-box { padding: 10px 14px; }
+    .note-box p { font-size: 12.5px; }
+
+    /* ── Tabelas → cards ── */
+    .table-wrap { overflow-x: visible; }
+
+    thead { display: none; }
+
+    tbody tr {
+      display: block;
+      border: 1px solid var(--rule);
+      margin-bottom: 8px;
+      border-radius: 2px;
+    }
+
+    tbody tr:last-child { border-bottom: 1px solid var(--rule); margin-bottom: 0; }
+
+    tbody td {
+      display: block;
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--rule);
+      white-space: normal;
+      line-height: 1.55;
+    }
+
+    tbody td:last-child {
+      border-bottom: none;
+      padding-right: 12px;
+    }
+
+    tbody td.td-label {
+      white-space: normal;
+      background: var(--bg-alt);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      color: var(--text);
+    }
+
+    tbody tr.row-highlight td { background: var(--table-stripe); }
+    tbody tr.row-highlight td.td-label { background: var(--bg-alt); }
+
+    /* ── Plano 30/60/90 ── */
     .plan-grid { grid-template-columns: 1fr; }
-    .plan-phase-label { border-right: none; border-bottom: none; padding-bottom: 4px; }
-    .plan-content { padding-left: 0; }
+
+    .plan-phase-label {
+      border-right: none;
+      border-top: none;
+      padding: 20px 0 8px 0;
+    }
+
+    .plan-row:not(:first-child) .plan-phase-label {
+      border-top: 1px solid var(--rule);
+      padding-top: 20px;
+    }
+
+    .plan-content {
+      border-top: none;
+      padding: 0 0 20px 0;
+    }
+
+    /* ── Investimento ── */
+    .inv-header { padding: 18px 18px; }
+    .inv-header h3 { font-size: 17px; }
+    .inv-row { grid-template-columns: 1fr; gap: 2px; padding: 14px 18px; }
+    .inv-row-value { font-size: 18px; }
+    .inv-total-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 18px; }
+    .inv-total-value { font-size: 24px; }
+
+    /* ── KPIs ── */
     .kpi-grid { grid-template-columns: 1fr; }
     .kpi-cell { border-right: none; }
     .kpi-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
     .kpi-cell:last-child { border-bottom: none; }
+
+    /* ── Entregáveis ── */
     .asset-row { grid-template-columns: 1fr; }
     .asset-name { border-right: none; border-bottom: 1px solid var(--rule); }
-    .inv-row { grid-template-columns: 1fr; gap: 4px; }
-    .inv-total-row { grid-template-columns: 1fr; gap: 4px; }
+
+    /* ── Fechamento ── */
+    .closing { margin-top: 36px; padding-top: 24px; }
+    .closing-inner { max-width: 100%; }
+
+    /* ── Footer ── */
+    .doc-footer { margin-top: 28px; flex-direction: column; align-items: flex-start; gap: 4px; }
   }
 </style>
 
