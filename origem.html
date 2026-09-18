@@ -498,18 +498,20 @@
       .ft{flex-direction:column;gap:1.25rem;align-items:flex-start}
     }
   </style>
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code — carregado após load para não bloquear LCP -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1724844215407144');
-  fbq('track', 'PageView');
+  window.addEventListener('load',function(){
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1724844215407144');
+    fbq('track', 'PageView');
+  });
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1724844215407144&ev=PageView&noscript=1"
@@ -939,10 +941,13 @@ window.addEventListener('scroll',()=>{
   document.getElementById('nav')?.classList.toggle('stuck',scrollY>60);
 },{passive:true});
 
-// HERO CANVAS — diferido para não bloquear FCP
+// HERO CANVAS — desativado em mobile (decorativo, consome CPU/bateria)
+// em desktop: diferido para não bloquear FCP
 function initCanvas(){(function(){
   const c=document.getElementById('heroCanvas');
   if(!c)return;
+  // Não roda canvas em tela <= 768px: efeito decorativo, não vale o custo
+  if(window.innerWidth<=768){c.style.display='none';return;}
   const ctx=c.getContext('2d');
   let W,H,pts=[];
   function resize(){
@@ -952,8 +957,7 @@ function initCanvas(){(function(){
   }
   resize();
   window.addEventListener('resize',resize,{passive:true});
-  const ptCount=window.innerWidth<640?28:55;
-  for(let i=0;i<ptCount;i++){
+  for(let i=0;i<55;i++){
     pts.push({
       x:Math.random()*W,y:Math.random()*H,
       vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,
@@ -991,8 +995,9 @@ function initCanvas(){(function(){
 })();}
 if('requestIdleCallback' in window){requestIdleCallback(initCanvas,{timeout:1500})}else{setTimeout(initCanvas,300)}
 
-// HERO REVEAL
-window.addEventListener('load',()=>{
+// HERO REVEAL — dispara no DOMContentLoaded (muito antes do load)
+// para o H1 não ficar invisível enquanto imagens/scripts carregam
+document.addEventListener('DOMContentLoaded',()=>{
   requestAnimationFrame(()=>{
     document.getElementById('heroProg')?.classList.add('in');
     document.querySelectorAll('.ri').forEach(el=>el.classList.add('in'));
